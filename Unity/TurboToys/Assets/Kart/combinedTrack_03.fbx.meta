@@ -1,0 +1,534 @@
+fileFormatVersion: 2
+guid: 39a617b2145c3aa45b0051d4fe7630d1
+timeCreated: 1447421079
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Corner
+    100004: corner_middle
+    100006: diagonal_Corner
+    100008: diagonal_Corner1
+    100010: diagonal_Left
+    100012: diagonal_Left 1
+    100014: diagonal_Left 2
+    100016: diagonal_Left 3
+    100018: diagonal_Left 4
+    100020: diagonal_middle
+    100022: diagonal_middle 1
+    100024: diagonal_middle 2
+    100026: diagonal_middle 3
+    100028: diagonal_middle 4
+    100030: diagonal_right
+    100032: diagonal_right 1
+    100034: diagonal_right 2
+    100036: diagonal_right 3
+    100038: diagonal_right 4
+    100040: diagonal_straight
+    100042: diagonal_straight1
+    100044: diagonal_straight2
+    100046: diagonal_straight3
+    100048: diagonal_straight4
+    100050: left_side
+    100052: left_side 1
+    100054: left_Wall
+    100056: loop_loop_middle
+    100058: middle
+    100060: middle 1
+    100062: polySurface1
+    100064: polySurface2
+    100066: polySurface3
+    100068: right_side
+    100070: right_side 1
+    100072: right_Wall
+    100074: straight
+    100076: straight10
+    100078: straight11
+    100080: straight12
+    100082: straight13
+    100084: straight2
+    100086: straight3
+    100088: straight4
+    100090: straight5
+    100092: straight6
+    100094: straight7
+    100096: straight8
+    100098: straight9
+    100100: straight_Left
+    100102: straight_Left 1
+    100104: straight_Left 10
+    100106: straight_Left 11
+    100108: straight_Left 12
+    100110: straight_Left 2
+    100112: straight_Left 3
+    100114: straight_Left 4
+    100116: straight_Left 5
+    100118: straight_Left 6
+    100120: straight_Left 7
+    100122: straight_Left 8
+    100124: straight_Left 9
+    100126: straight_Middle
+    100128: straight_Middle 1
+    100130: straight_Middle 10
+    100132: straight_Middle 11
+    100134: straight_Middle 12
+    100136: straight_Middle 2
+    100138: straight_Middle 3
+    100140: straight_Middle 4
+    100142: straight_Middle 5
+    100144: straight_Middle 6
+    100146: straight_Middle 7
+    100148: straight_Middle 8
+    100150: straight_Middle 9
+    100152: straight_Right
+    100154: straight_Right 1
+    100156: straight_Right 10
+    100158: straight_Right 11
+    100160: straight_Right 12
+    100162: straight_Right 2
+    100164: straight_Right 3
+    100166: straight_Right 4
+    100168: straight_Right 5
+    100170: straight_Right 6
+    100172: straight_Right 7
+    100174: straight_Right 8
+    100176: straight_Right 9
+    100178: U_corner
+    100180: U_inner
+    100182: U_middle
+    100184: U_outside
+    400000: //RootNode
+    400002: Corner
+    400004: corner_middle
+    400006: diagonal_Corner
+    400008: diagonal_Corner1
+    400010: diagonal_Left
+    400012: diagonal_Left 1
+    400014: diagonal_Left 2
+    400016: diagonal_Left 3
+    400018: diagonal_Left 4
+    400020: diagonal_middle
+    400022: diagonal_middle 1
+    400024: diagonal_middle 2
+    400026: diagonal_middle 3
+    400028: diagonal_middle 4
+    400030: diagonal_right
+    400032: diagonal_right 1
+    400034: diagonal_right 2
+    400036: diagonal_right 3
+    400038: diagonal_right 4
+    400040: diagonal_straight
+    400042: diagonal_straight1
+    400044: diagonal_straight2
+    400046: diagonal_straight3
+    400048: diagonal_straight4
+    400050: left_side
+    400052: left_side 1
+    400054: left_Wall
+    400056: loop_loop_middle
+    400058: middle
+    400060: middle 1
+    400062: polySurface1
+    400064: polySurface2
+    400066: polySurface3
+    400068: right_side
+    400070: right_side 1
+    400072: right_Wall
+    400074: straight
+    400076: straight10
+    400078: straight11
+    400080: straight12
+    400082: straight13
+    400084: straight2
+    400086: straight3
+    400088: straight4
+    400090: straight5
+    400092: straight6
+    400094: straight7
+    400096: straight8
+    400098: straight9
+    400100: straight_Left
+    400102: straight_Left 1
+    400104: straight_Left 10
+    400106: straight_Left 11
+    400108: straight_Left 12
+    400110: straight_Left 2
+    400112: straight_Left 3
+    400114: straight_Left 4
+    400116: straight_Left 5
+    400118: straight_Left 6
+    400120: straight_Left 7
+    400122: straight_Left 8
+    400124: straight_Left 9
+    400126: straight_Middle
+    400128: straight_Middle 1
+    400130: straight_Middle 10
+    400132: straight_Middle 11
+    400134: straight_Middle 12
+    400136: straight_Middle 2
+    400138: straight_Middle 3
+    400140: straight_Middle 4
+    400142: straight_Middle 5
+    400144: straight_Middle 6
+    400146: straight_Middle 7
+    400148: straight_Middle 8
+    400150: straight_Middle 9
+    400152: straight_Right
+    400154: straight_Right 1
+    400156: straight_Right 10
+    400158: straight_Right 11
+    400160: straight_Right 12
+    400162: straight_Right 2
+    400164: straight_Right 3
+    400166: straight_Right 4
+    400168: straight_Right 5
+    400170: straight_Right 6
+    400172: straight_Right 7
+    400174: straight_Right 8
+    400176: straight_Right 9
+    400178: U_corner
+    400180: U_inner
+    400182: U_middle
+    400184: U_outside
+    2300000: corner_middle
+    2300002: diagonal_Left
+    2300004: diagonal_Left 1
+    2300006: diagonal_Left 2
+    2300008: diagonal_Left 3
+    2300010: diagonal_Left 4
+    2300012: diagonal_middle
+    2300014: diagonal_middle 1
+    2300016: diagonal_middle 2
+    2300018: diagonal_middle 3
+    2300020: diagonal_middle 4
+    2300022: diagonal_right
+    2300024: diagonal_right 1
+    2300026: diagonal_right 2
+    2300028: diagonal_right 3
+    2300030: diagonal_right 4
+    2300032: left_side
+    2300034: left_side 1
+    2300036: left_Wall
+    2300038: middle
+    2300040: middle 1
+    2300042: polySurface1
+    2300044: polySurface2
+    2300046: polySurface3
+    2300048: right_side
+    2300050: right_side 1
+    2300052: right_Wall
+    2300054: straight_Left
+    2300056: straight_Left 1
+    2300058: straight_Left 10
+    2300060: straight_Left 11
+    2300062: straight_Left 12
+    2300064: straight_Left 2
+    2300066: straight_Left 3
+    2300068: straight_Left 4
+    2300070: straight_Left 5
+    2300072: straight_Left 6
+    2300074: straight_Left 7
+    2300076: straight_Left 8
+    2300078: straight_Left 9
+    2300080: straight_Middle
+    2300082: straight_Middle 1
+    2300084: straight_Middle 10
+    2300086: straight_Middle 11
+    2300088: straight_Middle 12
+    2300090: straight_Middle 2
+    2300092: straight_Middle 3
+    2300094: straight_Middle 4
+    2300096: straight_Middle 5
+    2300098: straight_Middle 6
+    2300100: straight_Middle 7
+    2300102: straight_Middle 8
+    2300104: straight_Middle 9
+    2300106: straight_Right
+    2300108: straight_Right 1
+    2300110: straight_Right 10
+    2300112: straight_Right 11
+    2300114: straight_Right 12
+    2300116: straight_Right 2
+    2300118: straight_Right 3
+    2300120: straight_Right 4
+    2300122: straight_Right 5
+    2300124: straight_Right 6
+    2300126: straight_Right 7
+    2300128: straight_Right 8
+    2300130: straight_Right 9
+    2300132: U_inner
+    2300134: U_middle
+    2300136: U_outside
+    3300000: corner_middle
+    3300002: diagonal_Left
+    3300004: diagonal_Left 1
+    3300006: diagonal_Left 2
+    3300008: diagonal_Left 3
+    3300010: diagonal_Left 4
+    3300012: diagonal_middle
+    3300014: diagonal_middle 1
+    3300016: diagonal_middle 2
+    3300018: diagonal_middle 3
+    3300020: diagonal_middle 4
+    3300022: diagonal_right
+    3300024: diagonal_right 1
+    3300026: diagonal_right 2
+    3300028: diagonal_right 3
+    3300030: diagonal_right 4
+    3300032: left_side
+    3300034: left_side 1
+    3300036: left_Wall
+    3300038: middle
+    3300040: middle 1
+    3300042: polySurface1
+    3300044: polySurface2
+    3300046: polySurface3
+    3300048: right_side
+    3300050: right_side 1
+    3300052: right_Wall
+    3300054: straight_Left
+    3300056: straight_Left 1
+    3300058: straight_Left 10
+    3300060: straight_Left 11
+    3300062: straight_Left 12
+    3300064: straight_Left 2
+    3300066: straight_Left 3
+    3300068: straight_Left 4
+    3300070: straight_Left 5
+    3300072: straight_Left 6
+    3300074: straight_Left 7
+    3300076: straight_Left 8
+    3300078: straight_Left 9
+    3300080: straight_Middle
+    3300082: straight_Middle 1
+    3300084: straight_Middle 10
+    3300086: straight_Middle 11
+    3300088: straight_Middle 12
+    3300090: straight_Middle 2
+    3300092: straight_Middle 3
+    3300094: straight_Middle 4
+    3300096: straight_Middle 5
+    3300098: straight_Middle 6
+    3300100: straight_Middle 7
+    3300102: straight_Middle 8
+    3300104: straight_Middle 9
+    3300106: straight_Right
+    3300108: straight_Right 1
+    3300110: straight_Right 10
+    3300112: straight_Right 11
+    3300114: straight_Right 12
+    3300116: straight_Right 2
+    3300118: straight_Right 3
+    3300120: straight_Right 4
+    3300122: straight_Right 5
+    3300124: straight_Right 6
+    3300126: straight_Right 7
+    3300128: straight_Right 8
+    3300130: straight_Right 9
+    3300132: U_inner
+    3300134: U_middle
+    3300136: U_outside
+    4300000: straight_Left
+    4300002: straight_Middle
+    4300004: straight_Right
+    4300006: corner_middle
+    4300008: right_Wall
+    4300010: left_Wall
+    4300012: straight_Left
+    4300014: straight_Middle
+    4300016: straight_Right
+    4300018: straight_Left
+    4300020: straight_Middle
+    4300022: straight_Right
+    4300024: straight_Left
+    4300026: straight_Middle
+    4300028: straight_Right
+    4300030: straight_Left
+    4300032: straight_Middle
+    4300034: straight_Right
+    4300036: straight_Left
+    4300038: straight_Middle
+    4300040: straight_Right
+    4300042: straight_Left
+    4300044: straight_Middle
+    4300046: straight_Right
+    4300048: straight_Left
+    4300050: straight_Middle
+    4300052: straight_Right
+    4300054: straight_Left
+    4300056: straight_Middle
+    4300058: straight_Right
+    4300060: straight_Left
+    4300062: straight_Middle
+    4300064: straight_Right
+    4300066: straight_Left
+    4300068: straight_Middle
+    4300070: straight_Right
+    4300072: straight_Left
+    4300074: straight_Middle
+    4300076: straight_Right
+    4300078: polySurface1
+    4300080: polySurface2
+    4300082: polySurface3
+    4300084: middle
+    4300086: right_side
+    4300088: left_side
+    4300090: diagonal_right
+    4300092: diagonal_Left
+    4300094: diagonal_middle
+    4300096: diagonal_right
+    4300098: diagonal_Left
+    4300100: diagonal_middle
+    4300102: diagonal_right
+    4300104: diagonal_Left
+    4300106: diagonal_middle
+    4300108: diagonal_right
+    4300110: diagonal_Left
+    4300112: diagonal_middle
+    4300114: U_inner
+    4300116: U_outside
+    4300118: U_middle
+    4300120: middle
+    4300122: right_side
+    4300124: left_side
+    4300126: straight_Left
+    4300128: straight_Middle
+    4300130: straight_Right
+    4300132: diagonal_right
+    4300134: diagonal_Left
+    4300136: diagonal_middle
+    6400000: corner_middle
+    6400002: diagonal_Left
+    6400004: diagonal_Left 1
+    6400006: diagonal_Left 2
+    6400008: diagonal_Left 3
+    6400010: diagonal_Left 4
+    6400012: diagonal_middle
+    6400014: diagonal_middle 1
+    6400016: diagonal_middle 2
+    6400018: diagonal_middle 3
+    6400020: diagonal_middle 4
+    6400022: diagonal_right
+    6400024: diagonal_right 1
+    6400026: diagonal_right 2
+    6400028: diagonal_right 3
+    6400030: diagonal_right 4
+    6400032: left_side
+    6400034: left_side 1
+    6400036: left_Wall
+    6400038: middle
+    6400040: middle 1
+    6400042: polySurface1
+    6400044: polySurface2
+    6400046: polySurface3
+    6400048: right_side
+    6400050: right_side 1
+    6400052: right_Wall
+    6400054: straight_Left
+    6400056: straight_Left 1
+    6400058: straight_Left 10
+    6400060: straight_Left 11
+    6400062: straight_Left 12
+    6400064: straight_Left 2
+    6400066: straight_Left 3
+    6400068: straight_Left 4
+    6400070: straight_Left 5
+    6400072: straight_Left 6
+    6400074: straight_Left 7
+    6400076: straight_Left 8
+    6400078: straight_Left 9
+    6400080: straight_Middle
+    6400082: straight_Middle 1
+    6400084: straight_Middle 10
+    6400086: straight_Middle 11
+    6400088: straight_Middle 12
+    6400090: straight_Middle 2
+    6400092: straight_Middle 3
+    6400094: straight_Middle 4
+    6400096: straight_Middle 5
+    6400098: straight_Middle 6
+    6400100: straight_Middle 7
+    6400102: straight_Middle 8
+    6400104: straight_Middle 9
+    6400106: straight_Right
+    6400108: straight_Right 1
+    6400110: straight_Right 10
+    6400112: straight_Right 11
+    6400114: straight_Right 12
+    6400116: straight_Right 2
+    6400118: straight_Right 3
+    6400120: straight_Right 4
+    6400122: straight_Right 5
+    6400124: straight_Right 6
+    6400126: straight_Right 7
+    6400128: straight_Right 8
+    6400130: straight_Right 9
+    6400132: U_inner
+    6400134: U_middle
+    6400136: U_outside
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1000
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
