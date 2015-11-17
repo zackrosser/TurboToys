@@ -60,10 +60,10 @@ public class KartControls : MonoBehaviour
 
         //Turn/Spin wheels
         Vector3 newForward = Vector3.Cross(Vector3.left, normal);
-        //wheels[0].transform.Rotate(wheels[0].transform.right, rb.velocity.magnitude, Space.World);
-       // wheels[1].transform.Rotate(wheels[1].transform.right, rb.velocity.magnitude, Space.World);
-        //wheels[2].transform.Rotate(wheels[2].transform.right, rb.velocity.magnitude, Space.World);
-        //wheels[3].transform.Rotate(wheels[3].transform.right, rb.velocity.magnitude, Space.World);
+        wheels[0].transform.Rotate(wheels[0].transform.right, rb.velocity.magnitude, Space.World);
+        wheels[1].transform.Rotate(wheels[1].transform.right, rb.velocity.magnitude, Space.World);
+        wheels[2].transform.Rotate(wheels[2].transform.right, rb.velocity.magnitude, Space.World);
+        wheels[3].transform.Rotate(wheels[3].transform.right, rb.velocity.magnitude, Space.World);
 
         //wheels[0].transform.rot
 
@@ -90,8 +90,8 @@ public class KartControls : MonoBehaviour
             if (Physics.Raycast(transform.position, -transform.up, out hit, hover_height * 1.2f))
             {
                 rb.AddForce(transform.up * jumpSpeed);
-                if (inputDevice.LeftStickX.Value >= 0.1) { drifting = true; driftingDirection = 1; }
-                else if (inputDevice.LeftStickX.Value <= -0.1) { drifting = true; driftingDirection = -1; }
+                //if (inputDevice.LeftStickX.Value >= 0.1) { drifting = true; driftingDirection = 1; }
+                //else if (inputDevice.LeftStickX.Value <= -0.1) { drifting = true; driftingDirection = -1; }
             }
         }
         else if (inputDevice.Action1.WasReleased)

@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 426fba1fd68263c4d93674f1b2916cf1
+timeCreated: 1447726131
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: axis1
+    100002: axis2
+    100004: back
+    100006: dashboard
+    100008: driverSeat
+    100010: engine
+    100012: engine_Support
+    100014: engine_Support1
+    100016: exhaust
+    100018: exhaust_Support
+    100020: exhaust_Support1
+    100022: floor
+    100024: frontBumper
+    100026: //RootNode
+    100028: side_Left
+    100030: Side_Right
+    100032: steeringBar_Left
+    100034: steeringBar_Right
+    100036: steeringWheel_inner
+    100038: steeringWheel_inner1
+    100040: steeringWheel_inner2
+    100042: steeringWheel_inner3
+    100044: steeringWheel_Support
+    100046: wheel_FL
+    100048: wheel_FR
+    100050: wheel_RL
+    100052: wheel_RR
+    400000: axis1
+    400002: axis2
+    400004: back
+    400006: dashboard
+    400008: driverSeat
+    400010: engine
+    400012: engine_Support
+    400014: engine_Support1
+    400016: exhaust
+    400018: exhaust_Support
+    400020: exhaust_Support1
+    400022: floor
+    400024: frontBumper
+    400026: //RootNode
+    400028: side_Left
+    400030: Side_Right
+    400032: steeringBar_Left
+    400034: steeringBar_Right
+    400036: steeringWheel_inner
+    400038: steeringWheel_inner1
+    400040: steeringWheel_inner2
+    400042: steeringWheel_inner3
+    400044: steeringWheel_Support
+    400046: wheel_FL
+    400048: wheel_FR
+    400050: wheel_RL
+    400052: wheel_RR
+    2300000: axis1
+    2300002: axis2
+    2300004: back
+    2300006: dashboard
+    2300008: driverSeat
+    2300010: engine
+    2300012: engine_Support
+    2300014: engine_Support1
+    2300016: exhaust
+    2300018: exhaust_Support
+    2300020: exhaust_Support1
+    2300022: floor
+    2300024: frontBumper
+    2300026: side_Left
+    2300028: Side_Right
+    2300030: steeringBar_Left
+    2300032: steeringBar_Right
+    2300034: steeringWheel_inner
+    2300036: steeringWheel_inner1
+    2300038: steeringWheel_inner2
+    2300040: steeringWheel_inner3
+    2300042: steeringWheel_Support
+    2300044: wheel_FL
+    2300046: wheel_FR
+    2300048: wheel_RL
+    2300050: wheel_RR
+    3300000: axis1
+    3300002: axis2
+    3300004: back
+    3300006: dashboard
+    3300008: driverSeat
+    3300010: engine
+    3300012: engine_Support
+    3300014: engine_Support1
+    3300016: exhaust
+    3300018: exhaust_Support
+    3300020: exhaust_Support1
+    3300022: floor
+    3300024: frontBumper
+    3300026: side_Left
+    3300028: Side_Right
+    3300030: steeringBar_Left
+    3300032: steeringBar_Right
+    3300034: steeringWheel_inner
+    3300036: steeringWheel_inner1
+    3300038: steeringWheel_inner2
+    3300040: steeringWheel_inner3
+    3300042: steeringWheel_Support
+    3300044: wheel_FL
+    3300046: wheel_FR
+    3300048: wheel_RL
+    3300050: wheel_RR
+    4300000: steeringWheel_Support
+    4300002: Side_Right
+    4300004: exhaust_Support
+    4300006: engine_Support
+    4300008: wheel_RR
+    4300010: wheel_FR
+    4300012: wheel_RL
+    4300014: axis1
+    4300016: exhaust_Support1
+    4300018: exhaust
+    4300020: engine_Support1
+    4300022: engine
+    4300024: wheel_FL
+    4300026: back
+    4300028: driverSeat
+    4300030: axis2
+    4300032: dashboard
+    4300034: frontBumper
+    4300036: side_Left
+    4300038: floor
+    4300040: steeringBar_Left
+    4300042: steeringWheel_inner
+    4300044: steeringWheel_inner1
+    4300046: steeringBar_Right
+    4300048: steeringWheel_inner2
+    4300050: steeringWheel_inner3
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0399999991
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

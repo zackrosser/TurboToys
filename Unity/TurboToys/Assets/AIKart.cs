@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AIKart : MonoBehaviour {
-
+public class AIKart : MonoBehaviour
+{
     public GameObject waypointControl;
     public GameObject[] waypoints;
     public GameObject[] m_hoverPoints;
@@ -19,22 +19,42 @@ public class AIKart : MonoBehaviour {
     public float gravitySpeed;
     public float jumpSpeed;
     public float damp = 10.0f;
+    public float breakSpeed = 10f;
+    public float fwd_accel = 5f;
     public float angle = 0;
+    public float maxSpeed = 800f;
+
+    private float minDistance = 10f;
+    Vector3 normal = new Vector3(0, 0, 0);
+    public GameObject[] wheels;
 
     public int point = 0;
     private GameObject targetWaypoint;
-
+    private bool first = true;
     Rigidbody rb;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         rb = GetComponent<Rigidbody>();
-        waypoints = waypointControl.GetComponent<Waypoints>().waypoints;
-        targetWaypoint = waypoints[0];
-        current_speed = 100;
+        //waypoints = waypointControl.GetComponent<Waypoints>().waypoints;
+
+        current_speed = 0;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 newForward = Vector3.Cross(Vector3.left, normal);
+        wheels[0].transform.Rotate(wheels[0].transform.right, rb.velocity.magnitude, Space.World);
+        wheels[1].transform.Rotate(wheels[1].transform.right, rb.velocity.magnitude, Space.World);
+        wheels[2].transform.Rotate(wheels[2].transform.right, rb.velocity.magnitude, Space.World);
+        wheels[3].transform.Rotate(wheels[3].transform.right, rb.velocity.magnitude, Space.World);
+        if (first)
+        {
+            waypoints = waypointControl.GetComponent<Waypoints>().waypoints;
+            targetWaypoint = waypoints[0];
+            first = false;
+        }
         RaycastHit hit;
 
         //inputDevice = InputManager.Devices[playerID];
@@ -47,34 +67,36 @@ public class AIKart : MonoBehaviour {
                 Debug.DrawLine(hoverPoint.transform.position, hit.point);
             }
         }
-        Debug.DrawLine(transform.position, targetWaypoint.transform.position,Color.red);
+        Debug.DrawLine(transform.position, targetWaypoint.transform.position, Color.red);
     }
 
     void FixedUpdate()
     {
-        Vector3 referenceRight = Vector3.Cross(Vector3.up, (transform.forward).normalized);
-        float angle2 = Vector3.Angle(targetWaypoint.transform.position, (transform.forward).normalized);
-        float sign = Mathf.Sign(Vector3.Dot(targetWaypoint.transform.position, referenceRight));
-        float finalAngle = sign * angle2;
-        angle = finalAngle;// Vector3.Angle(targetWaypoint.transform.position, transform.forward);
-        if (angle >= 180) { angle -= 360; }
-        float rightAngle = Vector3.Angle(transform.right + new Vector3(1,0,0), targetWaypoint.transform.position);
-        float leftAngle = Vector3.Angle(-transform.right + new Vector3(-1, 0, 0), targetWaypoint.transform.position);
-        if (angle>=5)
+       
+
+        Vector3 velocity = rb.velocity;
+        Vector3 forwardsVelocity = Vector3.Dot(transform.forward, velocity) * transform.forward;
+        Vector3 sidewaysVelocity = Vector3.Dot(transform.right, velocity) * transform.right;
+        sidewaysVelocity *= 0.95f;
+        velocity = sidewaysVelocity + forwardsVelocity;
+        rb.velocity = velocity;
+
+        RaycastHit hit2;
+        if (Physics.Raycast(transform.position, transform.forward, out hit2, 5))
         {
-            yaw = 1f;
-        }else if(angle<=-5)
-        {
-            yaw = -1f;
+            current_speed = breakSpeed;
         }
         else
         {
-            yaw = 0;
+            current_speed = fwd_accel;
         }
-        if(Vector3.Distance(transform.position, targetWaypoint.transform.position) <= 10)
+
+
+        if (Vector3.Distance(transform.position, targetWaypoint.transform.position) <= minDistance)
         {
+            minDistance = Random.RandomRange(12f, 16f);
             point++;
-            if(point > waypoints.Length)
+            if (point > waypoints.Length)
             {
                 point = 0;
             }
@@ -100,6 +122,32 @@ public class AIKart : MonoBehaviour {
             }
         }
         normal.Normalize();
+        float Rand = Random.RandomRange(0.5f, 1.5f);
+
+        Vector3 targetDirection = (targetWaypoint.transform.position - transform.position).normalized; //Vector3.ProjectOnPlane(, normal);        
+        Vector3 forward = transform.forward;
+        Plane plane = new Plane(Vector3.zero, transform.right, forward);
+
+
+        float angle2 = Vector3.Angle(targetDirection, forward);
+        Vector3 up = Vector3.Cross(targetDirection, forward);
+
+        float planeDistance = plane.GetDistanceToPoint(up);
+
+        float newAngle = Mathf.Sign(-planeDistance) * angle2;
+        angle = angle2;
+        if (newAngle >= Random.RandomRange(7f, 8f))
+        {
+            yaw = -Random.RandomRange(3f, 8f);
+        }
+        else if (newAngle <= -Random.RandomRange(5f, 8f))
+        {
+            yaw = Random.RandomRange(7f, 8f);
+        }
+        else
+        {
+            yaw = 0;
+        }
         if (Physics.Raycast(transform.position, -transform.up, hover_height * 2))
         {
             Vector3 newForward = Vector3.Cross(Vector3.left, normal);
@@ -137,6 +185,7 @@ public class AIKart : MonoBehaviour {
             /*Now we apply it to the ship with the quaternion product property*/
             //transform.rotation = tilt * transform.rotation;
         }
+        rb.drag = (1 / (1 + (rb.velocity.magnitude * rb.velocity.magnitude) / fwd_accel));
         Vector3 localVel = transform.InverseTransformDirection(rb.velocity);
         Vector3 worldVel = transform.TransformDirection(localVel);
         Debug.DrawLine(transform.position, worldVel + transform.position, Color.red);
@@ -153,7 +202,7 @@ public class AIKart : MonoBehaviour {
             }
             else
             {
-                rb.AddForce(transform.forward * (current_speed * Time.deltaTime));
+                rb.AddForce(transform.forward * (current_speed * Rand * Time.deltaTime));
             }
         }
     }
