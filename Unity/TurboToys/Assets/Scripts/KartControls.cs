@@ -47,6 +47,9 @@ public class KartControls : MonoBehaviour
     private InputDevice inputDevice;
     Vector3 normal = new Vector3(0, 0, 0);
     Rigidbody rb;
+
+    public Camera playerCam;
+
     // Use this for initialization
     void Start()
     {
@@ -89,7 +92,7 @@ public class KartControls : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, -transform.up, out hit, hover_height * 1.2f))
             {
-                rb.AddForce(transform.up * jumpSpeed);
+                //rb.AddForce(transform.up * jumpSpeed);
                 //if (inputDevice.LeftStickX.Value >= 0.1) { drifting = true; driftingDirection = 1; }
                 //else if (inputDevice.LeftStickX.Value <= -0.1) { drifting = true; driftingDirection = -1; }
             }
