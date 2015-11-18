@@ -1,23 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+using System;
+
 
 public class Controller : MonoBehaviour {
 
+    [Serializable]
+    public class PlayerData
+    {
+        public string character;
+        public string kart;
+        public int controllerIndex; // InputDevice?
+    }
 
-    //Player Data
-    public int playerCount = 0;
-    //Player 1
-    public string player1Character = "";
-    public string player1Kart = "";
-    //Player 1
-    public string player2Character = "";
-    public string player2Kart = "";
-    //Player 1
-    public string player3Character = "";
-    public string player3Kart = "";
-    //Player 1
-    public string player4Character = "";
-    public string player4Kart = "";
+    public List<PlayerData> players;
 
 
     // Use this for initialization

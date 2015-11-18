@@ -32,7 +32,7 @@ public class SpawnPoints : MonoBehaviour {
 
         //How many players are there
         //playerCount = controller.gameObject.GetComponent<Controller>().playerCount;
-        playerCount = 2;
+        playerCount = 4;
 
         switch (playerCount)
         {
@@ -72,7 +72,7 @@ public class SpawnPoints : MonoBehaviour {
                     kartsArray[i].SetActive(true);
                 }else if(karts[i] == "Player1")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position- new Vector3(-2,0.4f,-1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position- new Vector3(-2,0,-1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
                     if (playerCount == 4)
                     {
@@ -92,7 +92,7 @@ public class SpawnPoints : MonoBehaviour {
                 }
                 else if (karts[i] == "Player2")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0.4f, -1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
                     if (playerCount == 4)
                     {
@@ -110,7 +110,7 @@ public class SpawnPoints : MonoBehaviour {
                 }
                 else if (karts[i] == "Player3")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0.4f, -1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
                     if (playerCount == 4)
                     {
@@ -123,7 +123,7 @@ public class SpawnPoints : MonoBehaviour {
                 }
                 else if (karts[i] == "Player4")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0.4f, -1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
                     if (playerCount == 4)
                     {
