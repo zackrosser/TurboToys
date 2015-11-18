@@ -82,7 +82,7 @@ public class AIKart : MonoBehaviour
         rb.velocity = velocity;
 
         RaycastHit hit2;
-        if (Physics.Raycast(transform.position, transform.forward, out hit2, 2))
+        if (Physics.Raycast(transform.position, transform.forward, out hit2, 5))
         {
             current_speed = breakSpeed;
         }

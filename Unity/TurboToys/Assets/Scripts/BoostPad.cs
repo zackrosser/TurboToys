@@ -15,6 +15,6 @@ public class BoostPad : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<Rigidbody>().AddForce(transform.forward*5, ForceMode.VelocityChange);
+        other.GetComponent<Rigidbody>().AddForce(transform.forward*1, ForceMode.VelocityChange);
     }
 }
