@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-public class Driver : MonoBehaviour {
+public class DriverPicker : MonoBehaviour {
     
 
     public enum KartDrivers{
