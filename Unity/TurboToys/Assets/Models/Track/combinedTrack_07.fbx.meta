@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: b3fd6fc9a4aae1e40aabce71a1dff98b
+timeCreated: 1447806521
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Corner
+    100004: corner_middle
+    100006: diagonal_Corner
+    100008: diagonal_Left
+    100010: diagonal_Left 1
+    100012: diagonal_Left 2
+    100014: diagonal_Left 3
+    100016: diagonal_middle
+    100018: diagonal_middle 1
+    100020: diagonal_middle 2
+    100022: diagonal_middle 3
+    100024: diagonal_right
+    100026: diagonal_right 1
+    100028: diagonal_right 2
+    100030: diagonal_right 3
+    100032: diagonal_straight
+    100034: diagonal_straight1
+    100036: diagonal_straight2
+    100038: diagonal_straight3
+    100040: left_side
+    100042: left_Wall
+    100044: loop_loop_middle
+    100046: middle
+    100048: plant_01
+    100050: plant_GRP
+    100052: plantWire_01
+    100054: polySurface1
+    100056: polySurface10
+    100058: polySurface11
+    100060: polySurface12
+    100062: polySurface2
+    100064: polySurface3
+    100066: polySurface8
+    100068: polySurface9
+    100070: potPlant_01
+    100072: right_side
+    100074: right_Wall
+    100076: straight
+    100078: straight10
+    100080: straight11
+    100082: straight12
+    100084: straight13
+    100086: straight2
+    100088: straight3
+    100090: straight4
+    100092: straight5
+    100094: straight6
+    100096: straight7
+    100098: straight8
+    100100: straight9
+    100102: straight_Left
+    100104: straight_Left 1
+    100106: straight_Left 10
+    100108: straight_Left 11
+    100110: straight_Left 12
+    100112: straight_Left 2
+    100114: straight_Left 3
+    100116: straight_Left 4
+    100118: straight_Left 5
+    100120: straight_Left 6
+    100122: straight_Left 7
+    100124: straight_Left 8
+    100126: straight_Left 9
+    100128: straight_Middle
+    100130: straight_Middle 1
+    100132: straight_Middle 10
+    100134: straight_Middle 11
+    100136: straight_Middle 12
+    100138: straight_Middle 2
+    100140: straight_Middle 3
+    100142: straight_Middle 4
+    100144: straight_Middle 5
+    100146: straight_Middle 6
+    100148: straight_Middle 7
+    100150: straight_Middle 8
+    100152: straight_Middle 9
+    100154: straight_Right
+    100156: straight_Right 1
+    100158: straight_Right 10
+    100160: straight_Right 11
+    100162: straight_Right 12
+    100164: straight_Right 2
+    100166: straight_Right 3
+    100168: straight_Right 4
+    100170: straight_Right 5
+    100172: straight_Right 6
+    100174: straight_Right 7
+    100176: straight_Right 8
+    100178: straight_Right 9
+    100180: U_corner
+    100182: U_inner
+    100184: U_middle
+    100186: U_outside
+    400000: //RootNode
+    400002: Corner
+    400004: corner_middle
+    400006: diagonal_Corner
+    400008: diagonal_Left
+    400010: diagonal_Left 1
+    400012: diagonal_Left 2
+    400014: diagonal_Left 3
+    400016: diagonal_middle
+    400018: diagonal_middle 1
+    400020: diagonal_middle 2
+    400022: diagonal_middle 3
+    400024: diagonal_right
+    400026: diagonal_right 1
+    400028: diagonal_right 2
+    400030: diagonal_right 3
+    400032: diagonal_straight
+    400034: diagonal_straight1
+    400036: diagonal_straight2
+    400038: diagonal_straight3
+    400040: left_side
+    400042: left_Wall
+    400044: loop_loop_middle
+    400046: middle
+    400048: plant_01
+    400050: plant_GRP
+    400052: plantWire_01
+    400054: polySurface1
+    400056: polySurface10
+    400058: polySurface11
+    400060: polySurface12
+    400062: polySurface2
+    400064: polySurface3
+    400066: polySurface8
+    400068: polySurface9
+    400070: potPlant_01
+    400072: right_side
+    400074: right_Wall
+    400076: straight
+    400078: straight10
+    400080: straight11
+    400082: straight12
+    400084: straight13
+    400086: straight2
+    400088: straight3
+    400090: straight4
+    400092: straight5
+    400094: straight6
+    400096: straight7
+    400098: straight8
+    400100: straight9
+    400102: straight_Left
+    400104: straight_Left 1
+    400106: straight_Left 10
+    400108: straight_Left 11
+    400110: straight_Left 12
+    400112: straight_Left 2
+    400114: straight_Left 3
+    400116: straight_Left 4
+    400118: straight_Left 5
+    400120: straight_Left 6
+    400122: straight_Left 7
+    400124: straight_Left 8
+    400126: straight_Left 9
+    400128: straight_Middle
+    400130: straight_Middle 1
+    400132: straight_Middle 10
+    400134: straight_Middle 11
+    400136: straight_Middle 12
+    400138: straight_Middle 2
+    400140: straight_Middle 3
+    400142: straight_Middle 4
+    400144: straight_Middle 5
+    400146: straight_Middle 6
+    400148: straight_Middle 7
+    400150: straight_Middle 8
+    400152: straight_Middle 9
+    400154: straight_Right
+    400156: straight_Right 1
+    400158: straight_Right 10
+    400160: straight_Right 11
+    400162: straight_Right 12
+    400164: straight_Right 2
+    400166: straight_Right 3
+    400168: straight_Right 4
+    400170: straight_Right 5
+    400172: straight_Right 6
+    400174: straight_Right 7
+    400176: straight_Right 8
+    400178: straight_Right 9
+    400180: U_corner
+    400182: U_inner
+    400184: U_middle
+    400186: U_outside
+    2300000: corner_middle
+    2300002: diagonal_Left
+    2300004: diagonal_Left 1
+    2300006: diagonal_Left 2
+    2300008: diagonal_Left 3
+    2300010: diagonal_middle
+    2300012: diagonal_middle 1
+    2300014: diagonal_middle 2
+    2300016: diagonal_middle 3
+    2300018: diagonal_right
+    2300020: diagonal_right 1
+    2300022: diagonal_right 2
+    2300024: diagonal_right 3
+    2300026: left_side
+    2300028: left_Wall
+    2300030: middle
+    2300032: plant_01
+    2300034: plantWire_01
+    2300036: polySurface1
+    2300038: polySurface11
+    2300040: polySurface12
+    2300042: polySurface2
+    2300044: polySurface3
+    2300046: polySurface9
+    2300048: potPlant_01
+    2300050: right_side
+    2300052: right_Wall
+    2300054: straight_Left
+    2300056: straight_Left 1
+    2300058: straight_Left 10
+    2300060: straight_Left 11
+    2300062: straight_Left 12
+    2300064: straight_Left 2
+    2300066: straight_Left 3
+    2300068: straight_Left 4
+    2300070: straight_Left 5
+    2300072: straight_Left 6
+    2300074: straight_Left 7
+    2300076: straight_Left 8
+    2300078: straight_Left 9
+    2300080: straight_Middle
+    2300082: straight_Middle 1
+    2300084: straight_Middle 10
+    2300086: straight_Middle 11
+    2300088: straight_Middle 12
+    2300090: straight_Middle 2
+    2300092: straight_Middle 3
+    2300094: straight_Middle 4
+    2300096: straight_Middle 5
+    2300098: straight_Middle 6
+    2300100: straight_Middle 7
+    2300102: straight_Middle 8
+    2300104: straight_Middle 9
+    2300106: straight_Right
+    2300108: straight_Right 1
+    2300110: straight_Right 10
+    2300112: straight_Right 11
+    2300114: straight_Right 12
+    2300116: straight_Right 2
+    2300118: straight_Right 3
+    2300120: straight_Right 4
+    2300122: straight_Right 5
+    2300124: straight_Right 6
+    2300126: straight_Right 7
+    2300128: straight_Right 8
+    2300130: straight_Right 9
+    2300132: U_inner
+    2300134: U_middle
+    2300136: U_outside
+    3300000: corner_middle
+    3300002: diagonal_Left
+    3300004: diagonal_Left 1
+    3300006: diagonal_Left 2
+    3300008: diagonal_Left 3
+    3300010: diagonal_middle
+    3300012: diagonal_middle 1
+    3300014: diagonal_middle 2
+    3300016: diagonal_middle 3
+    3300018: diagonal_right
+    3300020: diagonal_right 1
+    3300022: diagonal_right 2
+    3300024: diagonal_right 3
+    3300026: left_side
+    3300028: left_Wall
+    3300030: middle
+    3300032: plant_01
+    3300034: plantWire_01
+    3300036: polySurface1
+    3300038: polySurface11
+    3300040: polySurface12
+    3300042: polySurface2
+    3300044: polySurface3
+    3300046: polySurface9
+    3300048: potPlant_01
+    3300050: right_side
+    3300052: right_Wall
+    3300054: straight_Left
+    3300056: straight_Left 1
+    3300058: straight_Left 10
+    3300060: straight_Left 11
+    3300062: straight_Left 12
+    3300064: straight_Left 2
+    3300066: straight_Left 3
+    3300068: straight_Left 4
+    3300070: straight_Left 5
+    3300072: straight_Left 6
+    3300074: straight_Left 7
+    3300076: straight_Left 8
+    3300078: straight_Left 9
+    3300080: straight_Middle
+    3300082: straight_Middle 1
+    3300084: straight_Middle 10
+    3300086: straight_Middle 11
+    3300088: straight_Middle 12
+    3300090: straight_Middle 2
+    3300092: straight_Middle 3
+    3300094: straight_Middle 4
+    3300096: straight_Middle 5
+    3300098: straight_Middle 6
+    3300100: straight_Middle 7
+    3300102: straight_Middle 8
+    3300104: straight_Middle 9
+    3300106: straight_Right
+    3300108: straight_Right 1
+    3300110: straight_Right 10
+    3300112: straight_Right 11
+    3300114: straight_Right 12
+    3300116: straight_Right 2
+    3300118: straight_Right 3
+    3300120: straight_Right 4
+    3300122: straight_Right 5
+    3300124: straight_Right 6
+    3300126: straight_Right 7
+    3300128: straight_Right 8
+    3300130: straight_Right 9
+    3300132: U_inner
+    3300134: U_middle
+    3300136: U_outside
+    4300000: straight_Left
+    4300002: straight_Middle
+    4300004: straight_Right
+    4300006: corner_middle
+    4300008: right_Wall
+    4300010: left_Wall
+    4300012: straight_Left
+    4300014: straight_Middle
+    4300016: straight_Right
+    4300018: straight_Left
+    4300020: straight_Middle
+    4300022: straight_Right
+    4300024: straight_Left
+    4300026: straight_Middle
+    4300028: straight_Right
+    4300030: straight_Left
+    4300032: straight_Middle
+    4300034: straight_Right
+    4300036: straight_Left
+    4300038: straight_Middle
+    4300040: straight_Right
+    4300042: straight_Left
+    4300044: straight_Middle
+    4300046: straight_Right
+    4300048: straight_Left
+    4300050: straight_Middle
+    4300052: straight_Right
+    4300054: straight_Left
+    4300056: straight_Middle
+    4300058: straight_Right
+    4300060: straight_Left
+    4300062: straight_Middle
+    4300064: straight_Right
+    4300066: straight_Left
+    4300068: straight_Middle
+    4300070: straight_Right
+    4300072: straight_Left
+    4300074: straight_Middle
+    4300076: straight_Right
+    4300078: polySurface1
+    4300080: polySurface2
+    4300082: polySurface3
+    4300084: middle
+    4300086: right_side
+    4300088: left_side
+    4300090: diagonal_right
+    4300092: diagonal_Left
+    4300094: diagonal_middle
+    4300096: diagonal_right
+    4300098: diagonal_Left
+    4300100: diagonal_middle
+    4300102: diagonal_right
+    4300104: diagonal_Left
+    4300106: diagonal_middle
+    4300108: diagonal_right
+    4300110: diagonal_Left
+    4300112: diagonal_middle
+    4300114: U_inner
+    4300116: U_outside
+    4300118: U_middle
+    4300120: straight_Left
+    4300122: straight_Middle
+    4300124: straight_Right
+    4300126: potPlant_01
+    4300128: plant_01
+    4300130: plantWire_01
+    4300132: polySurface9
+    4300134: polySurface11
+    4300136: polySurface12
+    6400000: corner_middle
+    6400002: diagonal_Left
+    6400004: diagonal_Left 1
+    6400006: diagonal_Left 2
+    6400008: diagonal_Left 3
+    6400010: diagonal_middle
+    6400012: diagonal_middle 1
+    6400014: diagonal_middle 2
+    6400016: diagonal_middle 3
+    6400018: diagonal_right
+    6400020: diagonal_right 1
+    6400022: diagonal_right 2
+    6400024: diagonal_right 3
+    6400026: left_side
+    6400028: left_Wall
+    6400030: middle
+    6400032: plant_01
+    6400034: plantWire_01
+    6400036: polySurface1
+    6400038: polySurface11
+    6400040: polySurface12
+    6400042: polySurface2
+    6400044: polySurface3
+    6400046: polySurface9
+    6400048: potPlant_01
+    6400050: right_side
+    6400052: right_Wall
+    6400054: straight_Left
+    6400056: straight_Left 1
+    6400058: straight_Left 10
+    6400060: straight_Left 11
+    6400062: straight_Left 12
+    6400064: straight_Left 2
+    6400066: straight_Left 3
+    6400068: straight_Left 4
+    6400070: straight_Left 5
+    6400072: straight_Left 6
+    6400074: straight_Left 7
+    6400076: straight_Left 8
+    6400078: straight_Left 9
+    6400080: straight_Middle
+    6400082: straight_Middle 1
+    6400084: straight_Middle 10
+    6400086: straight_Middle 11
+    6400088: straight_Middle 12
+    6400090: straight_Middle 2
+    6400092: straight_Middle 3
+    6400094: straight_Middle 4
+    6400096: straight_Middle 5
+    6400098: straight_Middle 6
+    6400100: straight_Middle 7
+    6400102: straight_Middle 8
+    6400104: straight_Middle 9
+    6400106: straight_Right
+    6400108: straight_Right 1
+    6400110: straight_Right 10
+    6400112: straight_Right 11
+    6400114: straight_Right 12
+    6400116: straight_Right 2
+    6400118: straight_Right 3
+    6400120: straight_Right 4
+    6400122: straight_Right 5
+    6400124: straight_Right 6
+    6400126: straight_Right 7
+    6400128: straight_Right 8
+    6400130: straight_Right 9
+    6400132: U_inner
+    6400134: U_middle
+    6400136: U_outside
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1000
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
