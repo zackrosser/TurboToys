@@ -74,6 +74,7 @@ public class SpawnPoints : MonoBehaviour {
                 {
                     kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position- new Vector3(-2,0,-1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 0;
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
@@ -94,6 +95,7 @@ public class SpawnPoints : MonoBehaviour {
                 {
                     kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 0;
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
@@ -112,6 +114,7 @@ public class SpawnPoints : MonoBehaviour {
                 {
                     kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 0;
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 0.5f, 0.5f);
@@ -125,6 +128,7 @@ public class SpawnPoints : MonoBehaviour {
                 {
                     kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 0;
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
