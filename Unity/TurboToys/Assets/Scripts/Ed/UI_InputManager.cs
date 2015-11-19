@@ -8,7 +8,6 @@ public class UI_InputManager : MonoBehaviour {
 
     private List<InputDevice> inputDevice = new List<InputDevice>();
 
-
 	// Use this for initialization
 	void Start () {
         for (int i = 0; i < InputManager.Devices.Count; i++ )
@@ -19,8 +18,12 @@ public class UI_InputManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 RS = inputDevice[0].RightStick;
         Debug.Log(InputManager.Devices.Count);
+
+        if (InputManager.Devices.Count <= 0)
+            return;
+
+        Vector3 RS = inputDevice[0].RightStick;
 
         for (int i = 0; i < InputManager.Devices.Count; i++)
         {
@@ -29,5 +32,5 @@ public class UI_InputManager : MonoBehaviour {
                 playerPanels[i].Activate();
             }
         }
-	}
+    }
 }
