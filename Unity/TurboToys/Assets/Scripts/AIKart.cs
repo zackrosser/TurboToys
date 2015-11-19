@@ -138,9 +138,9 @@ public class AIKart : MonoBehaviour
         angle = angle2;
         if (newAngle >= Random.RandomRange(7f, 8f))
         {
-            yaw = -Random.RandomRange(3f, 8f);
+            yaw = -Random.RandomRange(7f, 8f);
         }
-        else if (newAngle <= -Random.RandomRange(5f, 8f))
+        else if (newAngle <= -Random.RandomRange(7f, 8f))
         {
             yaw = Random.RandomRange(7f, 8f);
         }

@@ -8,8 +8,11 @@ public class KartControls : MonoBehaviour
 
     public GameObject itemShell;
     public GameObject[] wheels;
+    public GameObject[] characters;
 
     //public Text scoreText;
+
+    public string character;
 
     public int playerID;
 
@@ -60,7 +63,21 @@ public class KartControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        switch (character)
+        {
+            case "Lego":
+                characters[0].SetActive(true);
+                break;
+            case "Carrot":
+                characters[1].SetActive(true);
+                break;
+            case "Lemon":
+                characters[2].SetActive(true);
+                break;
+            case "Gummy Bear":
+                characters[2].SetActive(true);
+                break;
+        }
         //Turn/Spin wheels
         Vector3 newForward = Vector3.Cross(Vector3.left, normal);
         wheels[0].transform.Rotate(wheels[0].transform.right, rb.velocity.magnitude, Space.World);
