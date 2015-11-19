@@ -8,8 +8,8 @@ public class Controller : MonoBehaviour {
     [Serializable]
     public class PlayerData
     {
+        public GameObject kart;
         public string character;
-        public string kart;
         public int controllerIndex; // InputDevice?
     }
 
