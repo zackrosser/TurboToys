@@ -32,7 +32,7 @@ public class SpawnPoints : MonoBehaviour {
 
         //How many players are there
         //playerCount = controller.gameObject.GetComponent<Controller>().playerCount;
-        playerCount = 3;
+        playerCount = 2;
 
         switch (playerCount)
         {
@@ -68,7 +68,7 @@ public class SpawnPoints : MonoBehaviour {
                 if(karts[i] == "AI")
                 {
                     //Spawn AI
-                    kartsArray.Add(Instantiate(enemy, spawnPoints[i].transform.position, spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray.Add(Instantiate(enemy, spawnPoints[i].transform.position - new Vector3(0, -0.5f, 0), spawnPoints[i].transform.rotation) as GameObject);
                     kartsArray[i].SetActive(true);
                 }else if(karts[i] == "Player1")
                 {

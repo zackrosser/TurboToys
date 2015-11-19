@@ -328,7 +328,14 @@ public class KartControls : MonoBehaviour
             transform.Rotate(Vector3.up, 0, Space.Self);
             if (!drifting)
             {
-                rb.AddTorque(transform.up * yaw * steeringAngle, ForceMode.Acceleration);
+                if (transform.InverseTransformDirection(rb.velocity).z < transform.forward.z)
+                {
+                    rb.AddTorque(transform.up * -yaw * steeringAngle, ForceMode.Acceleration);
+                }
+                else
+                {
+                    rb.AddTorque(transform.up * yaw * steeringAngle, ForceMode.Acceleration);
+                }
             }
             else if (drifting)
             {
