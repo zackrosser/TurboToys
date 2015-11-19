@@ -18,7 +18,6 @@ public class UI_InputManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(InputManager.Devices.Count);
 
         if (InputManager.Devices.Count <= 0)
             return;

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
 
+/// <summary>
+/// The character panel where the player is prompted to join the game. When activated it displays the selected Character
+/// </summary>
 public class CS_Panel : MonoBehaviour {
 
     public GameObject activeScreen;
     public GameObject inactiveScreen;
-    public CharacterSelectCursor cursor;
+    public CS_Cursor cursor;
     public bool activated = false;
 
     public void Activate()
