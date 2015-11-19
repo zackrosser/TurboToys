@@ -5,65 +5,78 @@ using InControl;
 public class CS_Cursor : MonoBehaviour {
 
     public DriverPicker driver;                 //The driver being updated
+    public KartPicker kart;
     public int inputID;
 
-    private List<CS_Portrait> characterButtons;
+    [HideInInspector]
+    public CS_PlayerPlate playerPlate;
+
+    private List<CS_Portrait> characterPortraits;
     private CS_Portrait currentPortrait;
+    private Rotate_Object highlight;
+   
     private int currentIndex;
 
 
     private float elapsedTime;
-    
+
+    private enum SelectionState { inactive, selecting, lockedIn}
+    private SelectionState currentSelectionState = SelectionState.inactive;
+
+    private bool RightTriggerPressed = false;
+    private bool LeftTriggerPressed = false;
+
 
     void Awake()
     {
-        characterButtons = GetAllPortraits();
+        highlight = transform.FindChild("Highlight").GetComponent<Rotate_Object>();
+        characterPortraits = GetAllPortraits();
+        playerPlate = GetComponentInChildren<CS_PlayerPlate>();
+        
+        
     }
 
     void OnEnable()
     {
-        HighlightPortrait(characterButtons[currentIndex]);
+        HighlightPortrait(characterPortraits[currentIndex]);
+        
     }
 
     void Update()
     {
         if (InputManager.Devices[inputID])
         {
-            InputDevice controller = InputManager.Devices[inputID];
-            Vector3 joystickInput = controller.RightStick;
-
-            if (joystickInput.y > 0)
+            if (currentSelectionState != SelectionState.lockedIn)
             {
-
-                elapsedTime -= Time.deltaTime * Mathf.Abs(joystickInput.y) * 5f;
-                currentIndex = Mathf.RoundToInt(elapsedTime);
-
-                if (currentIndex < 0)
-                {
-                    elapsedTime = 0;
-                    currentIndex = 0;
-                }
-
-            }
-            if (joystickInput.y < 0)
-            {
-
-                elapsedTime += Time.deltaTime * Mathf.Abs(joystickInput.y) * 5f;
-                currentIndex = Mathf.RoundToInt(elapsedTime);
-
-                if (currentIndex >= 3)
-                {
-                    elapsedTime = 2;
-                    currentIndex = 2;
-                }
-
+                ProcessCSInput();
+                
             }
 
-            if (currentPortrait != characterButtons[currentIndex])
+            if (currentPortrait != characterPortraits[currentIndex])
             {
-                currentPortrait.NotHighlighted();
-                HighlightPortrait(characterButtons[currentIndex]);
+                currentSelectionState = SelectionState.selecting;       //KnownBug: Player cant select the first character the cursor appears on (fix by moving cursor to another char and then back to the original)
+                currentPortrait.NotHighlighted(this);
+                HighlightPortrait(characterPortraits[currentIndex]);
             }
+
+
+            if (currentSelectionState == SelectionState.selecting && currentPortrait && InputManager.Devices[inputID].Action1)
+            {
+                //Character Selected!!
+                currentSelectionState = SelectionState.lockedIn;
+                highlight.stop = false;
+            }
+
+            if (currentSelectionState == SelectionState.lockedIn && currentPortrait && InputManager.Devices[inputID].Action2)
+            {
+                currentSelectionState = SelectionState.selecting;
+                highlight.stop = true;
+            }
+
+
+
+            ProcessKartSelectionInput();
+
         }
     }
 
@@ -72,7 +85,7 @@ public class CS_Cursor : MonoBehaviour {
 
         currentPortrait = portrait;
 
-        currentPortrait.Highlighted();
+        currentPortrait.Highlighted(this);
 
         transform.position = portrait.transform.position;
 
@@ -92,5 +105,67 @@ public class CS_Cursor : MonoBehaviour {
         }
 
         return portraits;
+    }
+
+    private void ProcessCSInput()
+    {
+        InputDevice controller = InputManager.Devices[inputID];
+        Vector3 joystickInput = controller.RightStick;
+
+        if (joystickInput.y > 0)
+        {
+
+            elapsedTime -= Time.deltaTime * Mathf.Abs(joystickInput.y) * 5f;
+            currentIndex = Mathf.RoundToInt(elapsedTime);
+
+            if (currentIndex < 0)
+            {
+                elapsedTime = 0;
+                currentIndex = 0;
+            }
+
+        }
+        if (joystickInput.y < 0)
+        {
+
+            elapsedTime += Time.deltaTime * Mathf.Abs(joystickInput.y) * 5f;
+            currentIndex = Mathf.RoundToInt(elapsedTime);
+
+            if (currentIndex >= 3)
+            {
+                elapsedTime = 2;
+                currentIndex = 2;
+            }
+           
+        }
+    }
+
+    private void ProcessKartSelectionInput()
+    {
+        if (InputManager.Devices[inputID].RightTrigger)
+        {
+            if (!RightTriggerPressed)
+            {
+                RightTriggerPressed = true;
+                kart.NextKart();
+            }
+        }
+        else
+        {
+            RightTriggerPressed = false;
+        }
+
+        if (InputManager.Devices[inputID].LeftTrigger)
+        {
+            if (!LeftTriggerPressed)
+            {
+                LeftTriggerPressed = true;
+                kart.PreviousKart();
+            }
+        }
+        else
+        {
+            LeftTriggerPressed = false;
+        }
     }
 }

@@ -249,6 +249,7 @@
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Ed\CS_Cursor.cs" />
      <Compile Include="Assets\Scripts\Ed\CS_Panel.cs" />
+     <Compile Include="Assets\Scripts\Ed\CS_PlayerPlate.cs" />
      <Compile Include="Assets\Scripts\Ed\CS_Portrait.cs" />
      <Compile Include="Assets\Scripts\Ed\DriverPicker.cs" />
      <Compile Include="Assets\Scripts\Ed\KartPicker.cs" />

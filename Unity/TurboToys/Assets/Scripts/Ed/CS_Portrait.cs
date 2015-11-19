@@ -1,29 +1,28 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class CS_Portrait : MonoBehaviour {
 
-    public int cursorsOnPortrait = 0;
+    public List<CS_Cursor> cursorsOnPortrait = new List<CS_Cursor>();
 
     void Update()
     {
-        if (name.Equals("carrot"))
+        //Rearange the player plates on the cursor to make them all visible
+        List<CS_Cursor> tempList = new List<CS_Cursor>(cursorsOnPortrait);
+        for (int i = 0; i < tempList.Count; i++)
         {
-            Debug.Log(cursorsOnPortrait);
+            tempList[i].playerPlate.currentStackPosition = i;
         }
     }
 
-	public void Highlighted()
+	public void Highlighted(CS_Cursor cursor)
     {
-        cursorsOnPortrait++;
+        cursorsOnPortrait.Add(cursor);
     }
 
-    public void NotHighlighted()
+    public void NotHighlighted(CS_Cursor cursor)
     {
-        cursorsOnPortrait--;
+        cursorsOnPortrait.Remove(cursor);
     }
 
-    public void Selected()
-    {
-
-    }
 }

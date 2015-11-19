@@ -24,12 +24,17 @@ public class KartPicker : MonoBehaviour {
 
     public KartControls controls;      //To Attach the wheels
 
+    private int counter = 0;
+    private int index = 0;
+
     // Use this for initialization
     void Start()
     {
-        LoadAllDrivers();
-        UpdateCurrentDriver(currentKart.ToString());
+        LoadAllKarts();
+        UpdateCurrentKart(currentKart.ToString());
         previousKart = currentKart;
+        index = (int)currentKart;
+        counter = index;
 
     }
 
@@ -38,12 +43,12 @@ public class KartPicker : MonoBehaviour {
         if (currentKart != previousKart)
         {
             previousKart = currentKart;
-            UpdateCurrentDriver(currentKart.ToString());
+            UpdateCurrentKart(currentKart.ToString());
 
         }
     }
 
-    public void UpdateCurrentDriver(string newDriver)
+    public void UpdateCurrentKart(string newDriver)
     {
 
         foreach (GameObject driver in kartList)
@@ -73,7 +78,7 @@ public class KartPicker : MonoBehaviour {
         }
     }
 
-    private void LoadAllDrivers()
+    private void LoadAllKarts()
     {
         foreach (KartTypes val in Enum.GetValues(typeof(KartTypes)))
         {
@@ -83,5 +88,21 @@ public class KartPicker : MonoBehaviour {
             driver.SetActive(false);
             kartList.Add(driver);
         }
+    }
+
+    public void NextKart()
+    {
+        counter++;
+        index = counter % 8;
+        KartTypes kart = (KartTypes)index;
+        UpdateCurrentKart(kart.ToString());
+    }
+
+    public void PreviousKart()
+    {
+        counter--;
+        index = counter % 8;
+        KartTypes kart = (KartTypes)index;
+        UpdateCurrentKart(kart.ToString());
     }
 }
