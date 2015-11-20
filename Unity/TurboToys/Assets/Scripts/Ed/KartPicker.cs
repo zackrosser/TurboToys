@@ -28,9 +28,11 @@ public class KartPicker : MonoBehaviour {
     private int index = 0;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
-        LoadAllKarts();
+        if (kartList.Count <= 0)
+            LoadAllKarts();
+
         UpdateCurrentKart(currentKart.ToString());
         previousKart = currentKart;
         index = (int)currentKart;
@@ -48,12 +50,12 @@ public class KartPicker : MonoBehaviour {
         }
     }
 
-    public void UpdateCurrentKart(string newDriver)
+    public void UpdateCurrentKart(string newKart)
     {
-
+        currentKart = (KartTypes)Enum.Parse(typeof(KartTypes), newKart);
         foreach (GameObject driver in kartList)
         {
-            if (!driver.name.ToLower().Contains(newDriver.ToLower()))
+            if (!driver.name.ToLower().Contains(newKart.ToLower()))
             {
                 driver.SetActive(false);
             }
@@ -102,7 +104,6 @@ public class KartPicker : MonoBehaviour {
     {
         counter--;
         index = Mathf.Abs(counter % 8);
-        Debug.Log(index);
         KartTypes kart = (KartTypes)index;
         UpdateCurrentKart(kart.ToString());
     }

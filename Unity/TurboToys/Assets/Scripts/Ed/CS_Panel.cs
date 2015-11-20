@@ -12,7 +12,6 @@ public class CS_Panel : MonoBehaviour {
 
     public void Activate()
     {
-        Debug.Log("activated" + name);
         activeScreen.SetActive(true);
         inactiveScreen.SetActive(false);
         cursor.gameObject.SetActive(true);

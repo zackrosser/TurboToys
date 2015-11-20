@@ -18,8 +18,12 @@ public class DriverPicker : MonoBehaviour {
     private List<GameObject> driverList = new List<GameObject>();
 
 	// Use this for initialization
-	void Start () {
-        LoadAllDrivers();
+	void Awake () {
+        if (driverList.Count <= 0)
+        {
+            LoadAllDrivers();
+        }
+
         UpdateCurrentDriver(currentDriver.ToString());
         previousDriver = currentDriver;
 	}
@@ -36,7 +40,7 @@ public class DriverPicker : MonoBehaviour {
 
     public void UpdateCurrentDriver(string newDriver)
     {
-
+        currentDriver = (KartDrivers) Enum.Parse(typeof(KartDrivers), newDriver); 
         foreach (GameObject driver in driverList)
         {
             if (!driver.name.ToLower().Contains(newDriver.ToLower()))

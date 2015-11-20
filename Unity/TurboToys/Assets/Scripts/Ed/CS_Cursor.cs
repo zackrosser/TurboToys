@@ -37,8 +37,6 @@ public class CS_Cursor : MonoBehaviour {
         characterPortraits = GetAllPortraits();
         playerPlate = GetComponentInChildren<CS_PlayerPlate>();
         charLoader = GameObject.FindGameObjectWithTag("CharacterLoader").GetComponent<Controller>();
-
-        player.kart = kart.transform.parent.transform.parent.gameObject;
         
     }
 
@@ -69,6 +67,10 @@ public class CS_Cursor : MonoBehaviour {
             if (currentSelectionState == SelectionState.selecting && currentPortrait && InputManager.Devices[inputID].Action1)
             {
                 //Character Selected!!
+                player.driver = driver.currentDriver;
+                player.kart = kart.currentKart;
+                Debug.Log(player.driver.ToString() + " " + player.kart.ToString());
+                player.controllerIndex = inputID;
                 charLoader.players.Add(player);
                 
                 currentSelectionState = SelectionState.lockedIn;

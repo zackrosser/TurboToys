@@ -8,8 +8,8 @@ public class Controller : MonoBehaviour {
     [Serializable]
     public class PlayerData
     {
-        public GameObject kart;
-        public string character;
+        public DriverPicker.KartDrivers driver;
+        public KartPicker.KartTypes kart;
         public int controllerIndex; // InputDevice?
     }
 
