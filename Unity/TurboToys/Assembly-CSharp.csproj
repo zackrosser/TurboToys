@@ -254,6 +254,7 @@
      <Compile Include="Assets\Scripts\Ed\DriverPicker.cs" />
      <Compile Include="Assets\Scripts\Ed\KartPicker.cs" />
      <Compile Include="Assets\Scripts\Ed\UI_InputManager.cs" />
+     <Compile Include="Assets\Scripts\Finished.cs" />
      <Compile Include="Assets\Scripts\Hover.cs" />
      <Compile Include="Assets\Scripts\ItemShell.cs" />
      <Compile Include="Assets\Scripts\KartControls.cs" />
