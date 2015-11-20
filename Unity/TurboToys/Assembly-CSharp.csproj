@@ -258,6 +258,7 @@
      <Compile Include="Assets\Scripts\ItemShell.cs" />
      <Compile Include="Assets\Scripts\KartControls.cs" />
      <Compile Include="Assets\Scripts\LapCount.cs" />
+     <Compile Include="Assets\Scripts\Respawn.cs" />
      <Compile Include="Assets\Scripts\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\SpawnPoints.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
