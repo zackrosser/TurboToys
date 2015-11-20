@@ -31,5 +31,43 @@ public class UI_InputManager : MonoBehaviour {
                 playerPanels[i].Activate();
             }
         }
+
+
+    
+        if (!ReadyToPlay())
+            return;
+
+        //Press Manu to start the game!
+        foreach (InputDevice controller in InputManager.Devices)
+        {
+            if (controller.MenuWasPressed)
+            {
+                Application.LoadLevel(1);
+            }
+        }
+    }
+
+    private bool ReadyToPlay()
+    {
+        List<CS_Panel> activePanels = new List<CS_Panel>();
+
+        foreach(CS_Panel panel in playerPanels)
+        {
+            if (panel.activated)
+            {
+                activePanels.Add(panel);
+            }
+        }
+
+        //MAke sure all active panels are ready to start the game
+        foreach (CS_Panel panel in activePanels)
+        {
+            if (!panel.Ready())
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

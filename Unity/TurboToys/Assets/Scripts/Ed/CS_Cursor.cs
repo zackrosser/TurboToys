@@ -43,7 +43,9 @@ public class CS_Cursor : MonoBehaviour {
     void OnEnable()
     {
         HighlightPortrait(characterPortraits[currentIndex]);
-        
+        currentSelectionState = SelectionState.inactive;
+        StartCoroutine(AllowSelection());
+
     }
 
     void Update()
@@ -53,12 +55,11 @@ public class CS_Cursor : MonoBehaviour {
             if (currentSelectionState != SelectionState.lockedIn)
             {
                 ProcessCSInput();
-                
+
             }
 
             if (currentPortrait != characterPortraits[currentIndex])
             {
-                currentSelectionState = SelectionState.selecting;       //KnownBug: Player cant select the first character the cursor appears on (fix by moving cursor to another char and then back to the original)
                 currentPortrait.NotHighlighted(this);
                 HighlightPortrait(characterPortraits[currentIndex]);
             }
@@ -91,11 +92,6 @@ public class CS_Cursor : MonoBehaviour {
 
             if (currentSelectionState != SelectionState.lockedIn)
                 ProcessKartSelectionInput();
-
-            if (InputManager.Devices[inputID].MenuWasPressed)
-            {
-                Application.LoadLevel(1);
-            }
 
         }
     }
@@ -187,5 +183,11 @@ public class CS_Cursor : MonoBehaviour {
         {
             LeftTriggerPressed = false;
         }
+    }
+
+    private System.Collections.IEnumerator AllowSelection()
+    {
+        yield return new WaitForSeconds(.5f);
+        currentSelectionState = SelectionState.selecting;
     }
 }
