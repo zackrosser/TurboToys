@@ -93,7 +93,7 @@ public class KartPicker : MonoBehaviour {
     public void NextKart()
     {
         counter++;
-        index = counter % 8;
+        index = Mathf.Abs(counter % 8);
         KartTypes kart = (KartTypes)index;
         UpdateCurrentKart(kart.ToString());
     }
@@ -101,7 +101,8 @@ public class KartPicker : MonoBehaviour {
     public void PreviousKart()
     {
         counter--;
-        index = counter % 8;
+        index = Mathf.Abs(counter % 8);
+        Debug.Log(index);
         KartTypes kart = (KartTypes)index;
         UpdateCurrentKart(kart.ToString());
     }
