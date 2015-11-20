@@ -14,7 +14,8 @@ public class SpawnPoints : MonoBehaviour {
 
     private bool first = true;
 
-    private GameObject controller;
+    public GameObject controller;
+    public Controller controlScript;
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +33,8 @@ public class SpawnPoints : MonoBehaviour {
 
         //How many players are there
         //playerCount = controller.gameObject.GetComponent<Controller>().playerCount;
-        playerCount = 1;
+        controlScript = controller.GetComponent<Controller>();
+        playerCount = controlScript.players.Count;
 
         switch (playerCount)
         {
@@ -72,10 +74,11 @@ public class SpawnPoints : MonoBehaviour {
                     kartsArray[i].SetActive(true);
                 }else if(karts[i] == "Player1")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position- new Vector3(-2,0,-1), spawnPoints[i].transform.rotation) as GameObject);
-                    kartsArray[i].SetActive(true);
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 0;
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().character = "Lego";
+                    kartsArray.Add(Instantiate(controlScript.players[0].kart, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray[i].GetComponentInChildren<KartControls>().playerID = 0;
+                    kartsArray[i].GetComponentInChildren<KartControls>().enabled = true;
+                    Destroy(controlScript.players[0].kart.gameObject);
+
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
@@ -94,10 +97,10 @@ public class SpawnPoints : MonoBehaviour {
                 }
                 else if (karts[i] == "Player2")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
-                    kartsArray[i].SetActive(true);
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 1;
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().character = "Lemon";
+                    kartsArray.Add(Instantiate(controlScript.players[1].kart, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray[i].GetComponentInChildren<KartControls>().playerID = 0;
+                    kartsArray[i].GetComponentInChildren<KartControls>().enabled = true;
+                    Destroy(controlScript.players[1].kart.gameObject);
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
@@ -110,14 +113,14 @@ public class SpawnPoints : MonoBehaviour {
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 1f, 0.5f);
                     }
-                    
+                    //kartsArray[i].GetComponent<KartControls>().enabled = true;
                 }
                 else if (karts[i] == "Player3")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
-                    kartsArray[i].SetActive(true);
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 2;
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().character = "Carrot";
+                    kartsArray.Add(Instantiate(controlScript.players[2].kart, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray[i].GetComponentInChildren<KartControls>().playerID = 0;
+                    kartsArray[i].GetComponentInChildren<KartControls>().enabled = true;
+                    Destroy(controlScript.players[2].kart.gameObject);
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 0.5f, 0.5f);
@@ -129,10 +132,10 @@ public class SpawnPoints : MonoBehaviour {
                 }
                 else if (karts[i] == "Player4")
                 {
-                    kartsArray.Add(Instantiate(player, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
-                    kartsArray[i].SetActive(true);
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerID = 3;
-                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().character = "Lego";
+                    kartsArray.Add(Instantiate(controlScript.players[3].kart, spawnPoints[i].transform.position - new Vector3(-2, 0, -1), spawnPoints[i].transform.rotation) as GameObject);
+                    kartsArray[i].GetComponentInChildren<KartControls>().playerID = 0;
+                    kartsArray[i].GetComponentInChildren<KartControls>().enabled = true;
+                    Destroy(controlScript.players[3].kart.gameObject);
                     if (playerCount == 4)
                     {
                         kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
