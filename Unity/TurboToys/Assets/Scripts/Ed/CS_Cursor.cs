@@ -66,6 +66,7 @@ public class CS_Cursor : MonoBehaviour {
             if (currentSelectionState == SelectionState.selecting && currentPortrait && InputManager.Devices[inputID].Action1)
             {
                 //Character Selected!!
+                Application.LoadLevel(1);
                 currentSelectionState = SelectionState.lockedIn;
                 readyOverlay.SetActive(true);
                 highlight.stop = false;
