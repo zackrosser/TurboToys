@@ -139,13 +139,13 @@ public class AIKart : MonoBehaviour
 
         float newAngle = Mathf.Sign(-planeDistance) * angle2;
         angle = angle2;
-        if (newAngle >= Random.RandomRange(7f, 8f))
+        if (newAngle >= Random.RandomRange(4f, 20f))
         {
-            yaw = -Random.RandomRange(7f, 8f);
+            yaw = -Random.RandomRange(4f, 6f);
         }
-        else if (newAngle <= -Random.RandomRange(7f, 8f))
+        else if (newAngle <= -Random.RandomRange(4f, 20f))
         {
-            yaw = Random.RandomRange(7f, 8f);
+            yaw = Random.RandomRange(4f, 6f);
         }
         else
         {
