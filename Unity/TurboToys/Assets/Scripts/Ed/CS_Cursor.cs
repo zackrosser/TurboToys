@@ -15,7 +15,7 @@ public class CS_Cursor : MonoBehaviour {
     private List<CS_Portrait> characterPortraits;
     private CS_Portrait currentPortrait;
     private Rotate_Object highlight;
-    private CharacterController charLoader;
+    private Controller charLoader;
    
     private int currentIndex;
 
@@ -28,14 +28,17 @@ public class CS_Cursor : MonoBehaviour {
     private bool RightTriggerPressed = false;
     private bool LeftTriggerPressed = false;
 
+    Controller.PlayerData player = new Controller.PlayerData();
+                
 
     void Awake()
     {
         highlight = transform.FindChild("Highlight").GetComponent<Rotate_Object>();
         characterPortraits = GetAllPortraits();
         playerPlate = GetComponentInChildren<CS_PlayerPlate>();
-        charLoader = GameObject.FindGameObjectWithTag("CharacterLoader").GetComponent<CharacterController>();
-        
+        charLoader = GameObject.FindGameObjectWithTag("CharacterLoader").GetComponent<Controller>();
+
+        player.kart = kart.transform.parent.transform.parent.gameObject;
         
     }
 
@@ -66,7 +69,8 @@ public class CS_Cursor : MonoBehaviour {
             if (currentSelectionState == SelectionState.selecting && currentPortrait && InputManager.Devices[inputID].Action1)
             {
                 //Character Selected!!
-                Application.LoadLevel(1);
+                charLoader.players.Add(player);
+                
                 currentSelectionState = SelectionState.lockedIn;
                 readyOverlay.SetActive(true);
                 highlight.stop = false;
@@ -75,6 +79,8 @@ public class CS_Cursor : MonoBehaviour {
 
             if (currentSelectionState == SelectionState.lockedIn && currentPortrait && InputManager.Devices[inputID].Action2)
             {
+                //Character Deselected
+                charLoader.players.Remove(player);
                 currentSelectionState = SelectionState.selecting;
                 readyOverlay.SetActive(false);
                 highlight.stop = true;
@@ -83,6 +89,11 @@ public class CS_Cursor : MonoBehaviour {
 
             if (currentSelectionState != SelectionState.lockedIn)
                 ProcessKartSelectionInput();
+
+            if (InputManager.Devices[inputID].MenuWasPressed)
+            {
+                Application.LoadLevel(1);
+            }
 
         }
     }
