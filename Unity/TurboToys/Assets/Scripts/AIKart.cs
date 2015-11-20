@@ -84,7 +84,10 @@ public class AIKart : MonoBehaviour
         RaycastHit hit2;
         if (Physics.Raycast(transform.position, transform.forward, out hit2, 5))
         {
-            current_speed = breakSpeed;
+            if (hit2.collider.gameObject.tag != "Boost")
+            {
+                current_speed = breakSpeed;
+            }
         }
         else
         {
@@ -138,9 +141,9 @@ public class AIKart : MonoBehaviour
         angle = angle2;
         if (newAngle >= Random.RandomRange(7f, 8f))
         {
-            yaw = -Random.RandomRange(3f, 8f);
+            yaw = -Random.RandomRange(7f, 8f);
         }
-        else if (newAngle <= -Random.RandomRange(5f, 8f))
+        else if (newAngle <= -Random.RandomRange(7f, 8f))
         {
             yaw = Random.RandomRange(7f, 8f);
         }
@@ -190,19 +193,20 @@ public class AIKart : MonoBehaviour
         Vector3 worldVel = transform.TransformDirection(localVel);
         Debug.DrawLine(transform.position, worldVel + transform.position, Color.red);
         Debug.DrawLine(transform.position, transform.right + transform.position, Color.green);
-        //float drift =  Vector3.Dot(worldVel , transform.right);
-        //int d = (int)drift;
-        //scoreText.text = d.ToString();
-        //scoreText.text = current_speed.ToString();
-        if (Physics.Raycast(transform.position, -transform.up, hover_height * 2))
+
+        //Limit top speed
+        //if (rb.velocity.magnitude < 30)
         {
-            if (drifting)
+            if (Physics.Raycast(transform.position, -transform.up, hover_height * 2))
             {
-                rb.AddForce(transform.forward * (current_speed * 1.1f * Time.deltaTime));
-            }
-            else
-            {
-                rb.AddForce(transform.forward * (current_speed * Rand * Time.deltaTime));
+                if (drifting)
+                {
+                    rb.AddForce(transform.forward * (current_speed * 1.1f * Time.deltaTime));
+                }
+                else
+                {
+                    rb.AddForce(transform.forward * (current_speed * Rand * Time.deltaTime));
+                }
             }
         }
     }

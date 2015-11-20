@@ -8,8 +8,11 @@ public class KartControls : MonoBehaviour
 
     public GameObject itemShell;
     public GameObject[] wheels;
+    public GameObject[] characters;
 
     //public Text scoreText;
+
+    public string character;
 
     public int playerID;
 
@@ -47,6 +50,9 @@ public class KartControls : MonoBehaviour
     private InputDevice inputDevice;
     Vector3 normal = new Vector3(0, 0, 0);
     Rigidbody rb;
+
+    public Camera playerCam;
+
     // Use this for initialization
     void Start()
     {
@@ -57,7 +63,21 @@ public class KartControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        switch (character)
+        {
+            case "Lego":
+                characters[0].SetActive(true);
+                break;
+            case "Carrot":
+                characters[1].SetActive(true);
+                break;
+            case "Lemon":
+                characters[2].SetActive(true);
+                break;
+            case "Gummy Bear":
+                characters[2].SetActive(true);
+                break;
+        }
         //Turn/Spin wheels
         Vector3 newForward = Vector3.Cross(Vector3.left, normal);
         wheels[0].transform.Rotate(wheels[0].transform.right, rb.velocity.magnitude, Space.World);
@@ -89,7 +109,7 @@ public class KartControls : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, -transform.up, out hit, hover_height * 1.2f))
             {
-                rb.AddForce(transform.up * jumpSpeed);
+                //rb.AddForce(transform.up * jumpSpeed);
                 //if (inputDevice.LeftStickX.Value >= 0.1) { drifting = true; driftingDirection = 1; }
                 //else if (inputDevice.LeftStickX.Value <= -0.1) { drifting = true; driftingDirection = -1; }
             }
@@ -308,7 +328,14 @@ public class KartControls : MonoBehaviour
             transform.Rotate(Vector3.up, 0, Space.Self);
             if (!drifting)
             {
-                rb.AddTorque(transform.up * yaw * steeringAngle, ForceMode.Acceleration);
+                if (transform.InverseTransformDirection(rb.velocity).z < transform.forward.z)
+                {
+                    rb.AddTorque(transform.up * -yaw * steeringAngle, ForceMode.Acceleration);
+                }
+                else
+                {
+                    rb.AddTorque(transform.up * yaw * steeringAngle, ForceMode.Acceleration);
+                }
             }
             else if (drifting)
             {
