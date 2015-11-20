@@ -6,6 +6,7 @@ public class CS_Cursor : MonoBehaviour {
 
     public DriverPicker driver;                 //The driver being updated
     public KartPicker kart;
+    public GameObject readyOverlay;
     public int inputID;
 
     [HideInInspector]
@@ -14,6 +15,7 @@ public class CS_Cursor : MonoBehaviour {
     private List<CS_Portrait> characterPortraits;
     private CS_Portrait currentPortrait;
     private Rotate_Object highlight;
+    private CharacterController charLoader;
    
     private int currentIndex;
 
@@ -32,6 +34,7 @@ public class CS_Cursor : MonoBehaviour {
         highlight = transform.FindChild("Highlight").GetComponent<Rotate_Object>();
         characterPortraits = GetAllPortraits();
         playerPlate = GetComponentInChildren<CS_PlayerPlate>();
+        charLoader = GameObject.FindGameObjectWithTag("CharacterLoader").GetComponent<CharacterController>();
         
         
     }
@@ -64,18 +67,21 @@ public class CS_Cursor : MonoBehaviour {
             {
                 //Character Selected!!
                 currentSelectionState = SelectionState.lockedIn;
+                readyOverlay.SetActive(true);
                 highlight.stop = false;
+                
             }
 
             if (currentSelectionState == SelectionState.lockedIn && currentPortrait && InputManager.Devices[inputID].Action2)
             {
                 currentSelectionState = SelectionState.selecting;
+                readyOverlay.SetActive(false);
                 highlight.stop = true;
             }
 
 
-
-            ProcessKartSelectionInput();
+            if (currentSelectionState != SelectionState.lockedIn)
+                ProcessKartSelectionInput();
 
         }
     }
