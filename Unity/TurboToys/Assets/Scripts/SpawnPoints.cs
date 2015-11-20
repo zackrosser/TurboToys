@@ -32,7 +32,7 @@ public class SpawnPoints : MonoBehaviour {
 
         //How many players are there
         //playerCount = controller.gameObject.GetComponent<Controller>().playerCount;
-        playerCount = 4;
+        playerCount = 1;
 
         switch (playerCount)
         {

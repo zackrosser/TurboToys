@@ -53,6 +53,8 @@ public class KartControls : MonoBehaviour
 
     public Camera playerCam;
 
+    public bool onGround = false;
+
     // Use this for initialization
     void Start()
     {
@@ -322,6 +324,7 @@ public class KartControls : MonoBehaviour
         normal.Normalize();
         if (Physics.Raycast(transform.position, -transform.up, hover_height * 2))
         {
+            onGround = true;
             Vector3 newForward = Vector3.Cross(Vector3.left, normal);
             Vector3 newUp = Vector3.Cross(Vector3.left, newForward);
             Quaternion.LookRotation(newForward, newUp);
@@ -357,6 +360,7 @@ public class KartControls : MonoBehaviour
         }
         else
         {
+            onGround = false;
             drifting = false;
         }
         rb.drag = (1 / (1 + (rb.velocity.magnitude * rb.velocity.magnitude) / fwd_accel));
