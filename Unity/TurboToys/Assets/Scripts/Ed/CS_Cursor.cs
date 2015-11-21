@@ -116,6 +116,7 @@ public class CS_Cursor : MonoBehaviour {
         {
             if (!child.name.Contains("Cursor"))
             {
+                Debug.Log("adding " + child.name);
                 portraits.Add(child.GetComponent<CS_Portrait>());
             }
         }
@@ -147,10 +148,10 @@ public class CS_Cursor : MonoBehaviour {
             elapsedTime += Time.deltaTime * Mathf.Abs(joystickInput.y) * 5f;
             currentIndex = Mathf.RoundToInt(elapsedTime);
 
-            if (currentIndex >= 3)
+            if (currentIndex >= characterPortraits.Count)
             {
-                elapsedTime = 2;
-                currentIndex = 2;
+                elapsedTime = characterPortraits.Count-1;
+                currentIndex = characterPortraits.Count-1;
             }
            
         }

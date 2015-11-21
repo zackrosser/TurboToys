@@ -64,7 +64,6 @@ public class SpawnPoints : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(controlScript.players.Count);
         if (first == true)
         {
             first = false;

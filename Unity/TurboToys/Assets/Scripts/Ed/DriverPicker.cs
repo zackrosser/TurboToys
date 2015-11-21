@@ -8,7 +8,8 @@ public class DriverPicker : MonoBehaviour {
     public enum KartDrivers{
         carrot,
         legoMan,
-        LemonDude
+        LemonDude,
+        gummyBear
     }
 
     public KartDrivers currentDriver = KartDrivers.legoMan;

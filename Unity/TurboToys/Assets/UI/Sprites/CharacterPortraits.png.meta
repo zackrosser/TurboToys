@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 8b6b6a18f9ae9294eb3db64b5f8c413c
-timeCreated: 1447882167
+timeCreated: 1448134679
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: CharacterPortraits_0
     21300002: CharacterPortraits_1
     21300004: CharacterPortraits_2
+    21300006: CharacterPortraits_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -77,6 +78,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterPortraits_3
+      rect:
+        serializedVersion: 2
+        x: 768
         y: 768
         width: 256
         height: 256
