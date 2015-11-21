@@ -129,32 +129,15 @@ public class CS_Cursor : MonoBehaviour {
         InputDevice controller = InputManager.Devices[inputID];
         Vector3 joystickInput = controller.RightStick;
 
-        if (joystickInput.y > 0)
+
+        elapsedTime -= Time.deltaTime * joystickInput.y * 5f;
+        currentIndex = (int)elapsedTime % characterPortraits.Count;
+
+        if (elapsedTime > 10000)
         {
-
-            elapsedTime -= Time.deltaTime * Mathf.Abs(joystickInput.y) * 5f;
-            currentIndex = Mathf.RoundToInt(elapsedTime);
-
-            if (currentIndex < 0)
-            {
-                elapsedTime = 0;
-                currentIndex = 0;
-            }
-
+            elapsedTime = 0;
         }
-        if (joystickInput.y < 0)
-        {
 
-            elapsedTime += Time.deltaTime * Mathf.Abs(joystickInput.y) * 5f;
-            currentIndex = Mathf.RoundToInt(elapsedTime);
-
-            if (currentIndex >= characterPortraits.Count)
-            {
-                elapsedTime = characterPortraits.Count-1;
-                currentIndex = characterPortraits.Count-1;
-            }
-           
-        }
     }
 
     private void ProcessKartSelectionInput()
