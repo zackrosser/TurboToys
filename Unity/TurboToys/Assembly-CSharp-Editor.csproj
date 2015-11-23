@@ -76,16 +76,28 @@
      <Compile Include="Assets\InControl\Source\Touch\Editor\TouchStickControlEditor.cs" />
      <Compile Include="Assets\InControl\Source\Touch\Editor\TouchSwipeControlEditor.cs" />
      <Compile Include="Assets\InControl\Source\Touch\Editor\TouchTrackControlEditor.cs" />
+     <Compile Include="Assets\iTweenEditor\Editor\iTweenEventDataEditor.cs" />
+     <Compile Include="Assets\iTweenEditor\Editor\iTweenPathEditor.cs" />
      <None Include="Assets\InControl\Readme\README.txt" />
      <None Include="Assets\Sample Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
+     <None Include="Assets\iTweenEditor\README.txt" />
      <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\TSF\Shaders\TSF.shader" />
      <None Include="Assets\InControl\Readme 1\README.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+<<<<<<< HEAD
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
+=======
+<<<<<<< HEAD
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -100,9 +112,6 @@
  </Reference>
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
