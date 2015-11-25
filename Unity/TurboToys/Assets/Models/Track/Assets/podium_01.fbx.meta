@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0849a5a3da046224b9a65d9a1b7c6b19
-timeCreated: 1448259307
+guid: a6ede48c02b9f6c48971de2cfa65b7e2
+timeCreated: 1448422081
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -22,6 +22,10 @@ ModelImporter:
     4300000: polySurface35
     4300002: polySurface34
     4300004: polySurface33
+    6400000: polySurface33
+    6400002: polySurface34
+    6400004: polySurface35
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -47,7 +51,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 300
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -80,7 +84,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
