@@ -24,6 +24,8 @@ public class AIKart : MonoBehaviour
     public float angle = 0;
     public float maxSpeed = 800f;
 
+    public int number;
+
     private float minDistance = 10f;
     Vector3 normal = new Vector3(0, 0, 0);
     public GameObject[] wheels;
