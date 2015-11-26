@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: d2a8b75c3a21ccf4a9885632e636bb53
+timeCreated: 1448504294
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bowl_01
+    100002: //RootNode
+    100004: meatball_01
+    100006: meatball_02
+    100008: meatball_03
+    100010: meatball_04
+    100012: meatball_05
+    100014: meatball_06
+    100016: meatball_07
+    100018: meatball_08
+    100020: meatball_GRP_01
+    100022: spagettiPiece_01
+    100024: spagettiPiece_010
+    100026: spagettiPiece_011
+    100028: spagettiPiece_012
+    100030: spagettiPiece_013
+    100032: spagettiPiece_014
+    100034: spagettiPiece_02
+    100036: spagettiPiece_03
+    100038: spagettiPiece_04
+    100040: spagettiPiece_05
+    100042: spagettiPiece_06
+    100044: spagettiPiece_07
+    100046: spagettiPiece_08
+    100048: spagettiPiece_09
+    100050: spaghetti_GRP_01
+    100052: spaghetti_GRP_sub
+    100054: spaghettiSauce_01
+    400000: bowl_01
+    400002: //RootNode
+    400004: meatball_01
+    400006: meatball_02
+    400008: meatball_03
+    400010: meatball_04
+    400012: meatball_05
+    400014: meatball_06
+    400016: meatball_07
+    400018: meatball_08
+    400020: meatball_GRP_01
+    400022: spagettiPiece_01
+    400024: spagettiPiece_010
+    400026: spagettiPiece_011
+    400028: spagettiPiece_012
+    400030: spagettiPiece_013
+    400032: spagettiPiece_014
+    400034: spagettiPiece_02
+    400036: spagettiPiece_03
+    400038: spagettiPiece_04
+    400040: spagettiPiece_05
+    400042: spagettiPiece_06
+    400044: spagettiPiece_07
+    400046: spagettiPiece_08
+    400048: spagettiPiece_09
+    400050: spaghetti_GRP_01
+    400052: spaghetti_GRP_sub
+    400054: spaghettiSauce_01
+    2300000: bowl_01
+    2300002: meatball_01
+    2300004: meatball_02
+    2300006: meatball_03
+    2300008: meatball_04
+    2300010: meatball_05
+    2300012: meatball_06
+    2300014: meatball_07
+    2300016: meatball_08
+    2300018: spagettiPiece_01
+    2300020: spagettiPiece_010
+    2300022: spagettiPiece_011
+    2300024: spagettiPiece_012
+    2300026: spagettiPiece_013
+    2300028: spagettiPiece_014
+    2300030: spagettiPiece_02
+    2300032: spagettiPiece_03
+    2300034: spagettiPiece_04
+    2300036: spagettiPiece_05
+    2300038: spagettiPiece_06
+    2300040: spagettiPiece_07
+    2300042: spagettiPiece_08
+    2300044: spagettiPiece_09
+    2300046: spaghettiSauce_01
+    3300000: bowl_01
+    3300002: meatball_01
+    3300004: meatball_02
+    3300006: meatball_03
+    3300008: meatball_04
+    3300010: meatball_05
+    3300012: meatball_06
+    3300014: meatball_07
+    3300016: meatball_08
+    3300018: spagettiPiece_01
+    3300020: spagettiPiece_010
+    3300022: spagettiPiece_011
+    3300024: spagettiPiece_012
+    3300026: spagettiPiece_013
+    3300028: spagettiPiece_014
+    3300030: spagettiPiece_02
+    3300032: spagettiPiece_03
+    3300034: spagettiPiece_04
+    3300036: spagettiPiece_05
+    3300038: spagettiPiece_06
+    3300040: spagettiPiece_07
+    3300042: spagettiPiece_08
+    3300044: spagettiPiece_09
+    3300046: spaghettiSauce_01
+    4300000: spaghettiSauce_01
+    4300002: spagettiPiece_01
+    4300004: spagettiPiece_02
+    4300006: spagettiPiece_03
+    4300008: spagettiPiece_04
+    4300010: spagettiPiece_05
+    4300012: spagettiPiece_06
+    4300014: spagettiPiece_07
+    4300016: spagettiPiece_08
+    4300018: spagettiPiece_09
+    4300020: spagettiPiece_010
+    4300022: spagettiPiece_011
+    4300024: spagettiPiece_012
+    4300026: spagettiPiece_013
+    4300028: spagettiPiece_014
+    4300030: meatball_01
+    4300032: meatball_02
+    4300034: meatball_03
+    4300036: meatball_04
+    4300038: meatball_05
+    4300040: meatball_06
+    4300042: meatball_07
+    4300044: meatball_08
+    4300046: bowl_01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5150
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
