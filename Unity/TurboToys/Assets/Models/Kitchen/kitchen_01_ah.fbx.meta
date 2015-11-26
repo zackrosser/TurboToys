@@ -1,22 +1,40 @@
 fileFormatVersion: 2
-guid: 8e7d8af17a119b14d8938a6582ce7e37
-timeCreated: 1448250603
+guid: f096953fed0575c459eac9f2c469403e
+timeCreated: 1448504296
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: kitchen_01
     100002: //RootNode
-    100004: pPlane1
+    100004: kitchen_GRP_01 1
+    100006: kitchenCeiling_01
+    100008: kitchenFloor_01
+    100010: pCone1
+    100012: pSphere1
     400000: kitchen_01
     400002: //RootNode
-    400004: pPlane1
+    400004: kitchen_GRP_01 1
+    400006: kitchenCeiling_01
+    400008: kitchenFloor_01
+    400010: pCone1
+    400012: pSphere1
     2300000: kitchen_01
-    2300002: pPlane1
+    2300002: kitchenCeiling_01
+    2300004: kitchenFloor_01
+    2300006: pCone1
+    2300008: pSphere1
     3300000: kitchen_01
-    3300002: pPlane1
-    4300000: pPlane1
-    4300002: kitchen_01
+    3300002: kitchenCeiling_01
+    3300004: kitchenFloor_01
+    3300006: pCone1
+    3300008: pSphere1
+    4300000: kitchenFloor_01
+    4300002: pCone1
+    4300004: pSphere1
+    4300006: kitchenCeiling_01
+    4300008: kitchen_01
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -40,7 +58,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 6000
+    globalScale: 5150
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -75,7 +93,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
