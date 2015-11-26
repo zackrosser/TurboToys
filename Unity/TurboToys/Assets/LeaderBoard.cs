@@ -18,29 +18,41 @@ public class LeaderBoard : MonoBehaviour {
     public List<GameObject> karts;
 
     public List<KartData> leaderBoard;
+    public List<KartData> UnSortedLeaderBoard;
     private int players = 0;
 
 	// Use this for initialization
 	void Start () {
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoints").GetComponent<SpawnPoints>();
-        karts = spawnPoint.kartsArray;
+        karts = spawnPoint.kartsArray;        
         spawnPoint.playerCount = players;
-        for(int i = 0; i < 8; i++)
+
+        for (int i = 0; i < 8; i++)
         {
             KartData kart = new KartData();
             kart.name = "Test";
             kart.kart = karts[i].gameObject;
-            kart.place = 0;
-            kart.wayPoint = 0;
+            kart.place = 0;       
             leaderBoard.Add(kart);
         }
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
-        for (int i = 0; i < 8; i++ )
+
+        for (int i = 0; i < 8; i++)
         {
-            //leaderBoard[i].wayPoint = (karts[i].gameObject.GetComponent<LapCount>().lapCount+1) * karts[i].gameObject.GetComponent<LapCount>().currentWaypoint;
+            GameObject kart = leaderBoard[i].kart;
+            leaderBoard[i].wayPoint = (kart.GetComponentInChildren<LapCount>().lapCount + 1) * kart.GetComponentInChildren<LapCount>().currentWaypoint + 1;
         }
+
+        leaderBoard.Sort((a, b) => b.wayPoint.CompareTo(a.wayPoint));
+
+        for (int i = 0; i < 8; i++)
+        {
+            GameObject kart = leaderBoard[i].kart;
+            leaderBoard[i].place = i + 1;
+        }
+
 	}
 }
