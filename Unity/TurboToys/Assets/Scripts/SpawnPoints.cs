@@ -60,6 +60,115 @@ public class SpawnPoints : MonoBehaviour {
                 break;
         }
 
+        SpawnKarts();
+    }
+
+    void SpawnKarts()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if (karts[i] == "AI")
+            {
+                //Spawn AI
+                kartsArray.Add(Instantiate(enemy, spawnPoints[i].transform.position - new Vector3(0, -0.5f, 0), Quaternion.identity) as GameObject);
+                kartsArray[i].SetActive(true);
+                kartsArray[i].transform.rotation = spawnPoints[i].transform.rotation;
+                kartsArray[i].GetComponent<AIKart>().number = 0;
+
+            }
+            else if (karts[i] == "Player1")
+            {
+                GameObject kartObj = Instantiate<GameObject>(PlayerKart);
+                PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
+                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
+                pKart.transform.rotation = spawnPoints[i].transform.rotation;
+                pKart.SetDriver(controlScript.players[0].driver);
+                pKart.SetKart(controlScript.players[0].kart);
+                pKart.SetControlID(controlScript.players[0].controllerIndex);
+                kartsArray.Add(pKart.gameObject);
+
+
+
+                if (playerCount == 4)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
+                }
+                else if (playerCount == 3)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 1f, 0.5f);
+                }
+                else if (playerCount == 2)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 1f, 0.5f);
+                }
+                else if (playerCount == 1)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0f, 1f, 1f);
+                }
+            }
+            else if (karts[i] == "Player2")
+            {
+                GameObject kartObj = Instantiate<GameObject>(PlayerKart);
+                PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
+                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
+                pKart.transform.rotation = spawnPoints[i].transform.rotation;
+                pKart.SetDriver(controlScript.players[1].driver);
+                pKart.SetKart(controlScript.players[1].kart);
+                pKart.SetControlID(controlScript.players[1].controllerIndex);
+                kartsArray.Add(pKart.gameObject);
+
+                if (playerCount == 4)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+                }
+                else if (playerCount == 3)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 0.5f, 0.5f);
+                }
+                else if (playerCount == 2)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 1f, 0.5f);
+                }
+                //kartsArray[i].GetComponent<KartControls>().enabled = true;
+            }
+            else if (karts[i] == "Player3")
+            {
+                GameObject kartObj = Instantiate<GameObject>(PlayerKart);
+                PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
+                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
+                pKart.transform.rotation = spawnPoints[i].transform.rotation;
+                pKart.SetDriver(controlScript.players[2].driver);
+                pKart.SetKart(controlScript.players[2].kart);
+                pKart.SetControlID(controlScript.players[2].controllerIndex);
+                kartsArray.Add(pKart.gameObject);
+
+                if (playerCount == 4)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 0.5f, 0.5f);
+                }
+                else if (playerCount == 3)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+                }
+            }
+            else if (karts[i] == "Player4")
+            {
+                GameObject kartObj = Instantiate<GameObject>(PlayerKart);
+                PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
+                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
+                pKart.transform.rotation = spawnPoints[i].transform.rotation;
+                pKart.SetDriver(controlScript.players[3].driver);
+                pKart.SetKart(controlScript.players[3].kart);
+                pKart.SetControlID(controlScript.players[3].controllerIndex);
+                kartsArray.Add(pKart.gameObject);
+
+                if (playerCount == 4)
+                {
+                    kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+                }
+            }
+        }
+
     }
 	
 	// Update is called once per frame
@@ -67,107 +176,6 @@ public class SpawnPoints : MonoBehaviour {
         if (first == true)
         {
             first = false;
-            for (int i = 0; i < 8; i++)
-            {
-                if(karts[i] == "AI")
-                {
-                    //Spawn AI
-                    kartsArray.Add(Instantiate(enemy, spawnPoints[i].transform.position - new Vector3(0, -0.5f, 0), Quaternion.identity) as GameObject);
-                    kartsArray[i].SetActive(true);
-                    kartsArray[i].transform.rotation = spawnPoints[i].transform.rotation;
-                    kartsArray[i].GetComponent<AIKart>().number = 0;
-
-                }else if(karts[i] == "Player1")
-                {
-                    GameObject kartObj = Instantiate<GameObject>(PlayerKart);
-                    PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
-                    pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
-                    pKart.transform.rotation = spawnPoints[i].transform.rotation;
-                    pKart.SetDriver(controlScript.players[0].driver);
-                    pKart.SetKart(controlScript.players[0].kart);
-                    pKart.SetControlID(controlScript.players[0].controllerIndex);
-                    kartsArray.Add(pKart.gameObject);
-                    
-
-
-                    if (playerCount == 4)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
-                    }else if (playerCount == 3)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 1f, 0.5f);
-                    }
-                    else if (playerCount == 2)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0.5f, 1f, 0.5f);
-                    }
-                    else if (playerCount == 1)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0f, 1f, 1f);
-                    }
-                }
-                else if (karts[i] == "Player2")
-                {
-                    GameObject kartObj = Instantiate<GameObject>(PlayerKart);
-                    PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
-                    pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
-                    pKart.transform.rotation = spawnPoints[i].transform.rotation;
-                    pKart.SetDriver(controlScript.players[1].driver);
-                    pKart.SetKart(controlScript.players[1].kart);
-                    pKart.SetControlID(controlScript.players[1].controllerIndex);
-                    kartsArray.Add(pKart.gameObject);
-
-                    if (playerCount == 4)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
-                    }
-                    else if (playerCount == 3)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 0.5f, 0.5f);
-                    }
-                    else if (playerCount == 2)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 1f, 0.5f);
-                    }
-                    //kartsArray[i].GetComponent<KartControls>().enabled = true;
-                }
-                else if (karts[i] == "Player3")
-                {
-                    GameObject kartObj = Instantiate<GameObject>(PlayerKart);
-                    PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
-                    pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
-                    pKart.transform.rotation = spawnPoints[i].transform.rotation;
-                    pKart.SetDriver(controlScript.players[2].driver);
-                    pKart.SetKart(controlScript.players[2].kart);
-                    pKart.SetControlID(controlScript.players[2].controllerIndex);
-                    kartsArray.Add(pKart.gameObject);
-
-                    if (playerCount == 4)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0, 0, 0.5f, 0.5f);
-                    }
-                    else if (playerCount == 3)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
-                    }
-                }
-                else if (karts[i] == "Player4")
-                {
-                    GameObject kartObj = Instantiate<GameObject>(PlayerKart);
-                    PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
-                    pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
-                    pKart.transform.rotation = spawnPoints[i].transform.rotation;
-                    pKart.SetDriver(controlScript.players[3].driver);
-                    pKart.SetKart(controlScript.players[3].kart);
-                    pKart.SetControlID(controlScript.players[3].controllerIndex);
-                    kartsArray.Add(pKart.gameObject);
-
-                    if (playerCount == 4)
-                    {
-                        kartsArray[i].gameObject.transform.GetChild(0).GetComponent<KartControls>().playerCam.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
-                    }
-                }
-            }
         }
     }
 }
