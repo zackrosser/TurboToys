@@ -84,6 +84,9 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.transform.rotation = spawnPoints[i].transform.rotation;
                 pKart.SetDriver(controlScript.players[0].driver);
                 pKart.SetKart(controlScript.players[0].kart);
+                pKart.GetComponentInChildren<LapCount>().enabled = true;
+                pKart.GetComponentInChildren<Respawn>().enabled = true;
+                pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[0].controllerIndex);
                 kartsArray.Add(pKart.gameObject);
 
@@ -114,6 +117,9 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.transform.rotation = spawnPoints[i].transform.rotation;
                 pKart.SetDriver(controlScript.players[1].driver);
                 pKart.SetKart(controlScript.players[1].kart);
+                pKart.GetComponentInChildren<LapCount>().enabled = true;
+                pKart.GetComponentInChildren<Respawn>().enabled = true;
+                pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[1].controllerIndex);
                 kartsArray.Add(pKart.gameObject);
 
@@ -139,6 +145,9 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.transform.rotation = spawnPoints[i].transform.rotation;
                 pKart.SetDriver(controlScript.players[2].driver);
                 pKart.SetKart(controlScript.players[2].kart);
+                pKart.GetComponentInChildren<LapCount>().enabled = true;
+                pKart.GetComponentInChildren<Respawn>().enabled = true;
+                pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[2].controllerIndex);
                 kartsArray.Add(pKart.gameObject);
 
@@ -159,6 +168,9 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.transform.rotation = spawnPoints[i].transform.rotation;
                 pKart.SetDriver(controlScript.players[3].driver);
                 pKart.SetKart(controlScript.players[3].kart);
+                pKart.GetComponentInChildren<LapCount>().enabled = true;
+                pKart.GetComponentInChildren<Respawn>().enabled = true;
+                pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[3].controllerIndex);
                 kartsArray.Add(pKart.gameObject);
 

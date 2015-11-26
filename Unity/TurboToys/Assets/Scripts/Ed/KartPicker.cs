@@ -73,8 +73,10 @@ public class KartPicker : MonoBehaviour {
                 for (int i = 0; i < wheelHolder.transform.childCount; i++)
                 {
                     wheels[i] = wheelHolder.transform.GetChild(i).gameObject;
+
                 }
                 controls.wheels = wheels;
+                transform.parent.GetComponent<AIKart>().wheels = wheels;
             }
 
         }

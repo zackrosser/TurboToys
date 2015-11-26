@@ -87,11 +87,7 @@
      <None Include="Assets\InControl\Readme 1\README.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
  <Reference Include="Assembly-UnityScript">
-<<<<<<< HEAD
- <HintPath>C:/Users/zack.rosser/Documents/GitHub/TurboToys/Unity/TurboToys/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
-=======
  <HintPath>C:/Users/patrick.sigley/Documents/GitHub/TurboToys/Unity/TurboToys/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
->>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>

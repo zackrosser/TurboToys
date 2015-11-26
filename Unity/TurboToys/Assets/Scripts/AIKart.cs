@@ -4,7 +4,7 @@ using System.Collections;
 public class AIKart : MonoBehaviour
 {
     public GameObject waypointControl;
-    public GameObject[] waypoints;
+    public GameObject[] waypoints = new GameObject[105];
     public GameObject[] m_hoverPoints;
     public float m_hoverForce = 9.0f;
     public float hover_height = 3f;
@@ -38,9 +38,34 @@ public class AIKart : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //waypoints = waypointControl.GetComponent<Waypoints>().waypoints;
-
         current_speed = 0;
+        waypointControl = GameObject.FindGameObjectWithTag("Waypoints");
+        //Select Random Driver
+        int rand = Random.Range(0, 3);
+        switch(rand)
+        {
+            case 0:
+                transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+                transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+                transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                break;
+            case 1:
+                transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+                transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+                transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                break;
+            case 2:
+                transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+                transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                break;
+            case 3:
+                //transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+                break;
+        }
     }
 
     // Update is called once per frame
