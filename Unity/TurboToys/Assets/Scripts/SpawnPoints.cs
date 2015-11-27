@@ -74,6 +74,7 @@ public class SpawnPoints : MonoBehaviour {
                 kartsArray[i].SetActive(true);
                 kartsArray[i].transform.rotation = spawnPoints[i].transform.rotation;
                 kartsArray[i].GetComponent<AIKart>().number = 0;
+                kartsArray[i].GetComponent<LapCount>().name = "CPU";
 
             }
             else if (karts[i] == "Player1")
@@ -88,6 +89,7 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.GetComponentInChildren<Respawn>().enabled = true;
                 pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[0].controllerIndex);
+                pKart.transform.GetChild(0).GetComponent<LapCount>().name = "P1";
                 kartsArray.Add(pKart.gameObject);
 
 
@@ -121,6 +123,7 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.GetComponentInChildren<Respawn>().enabled = true;
                 pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[1].controllerIndex);
+                pKart.transform.GetChild(0).GetComponent<LapCount>().name = "P2";
                 kartsArray.Add(pKart.gameObject);
 
                 if (playerCount == 4)
@@ -149,6 +152,7 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.GetComponentInChildren<Respawn>().enabled = true;
                 pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[2].controllerIndex);
+                pKart.transform.GetChild(0).GetComponent<LapCount>().name = "P3";
                 kartsArray.Add(pKart.gameObject);
 
                 if (playerCount == 4)
@@ -172,6 +176,7 @@ public class SpawnPoints : MonoBehaviour {
                 pKart.GetComponentInChildren<Respawn>().enabled = true;
                 pKart.GetComponentInChildren<Finished>().enabled = true;
                 pKart.SetControlID(controlScript.players[3].controllerIndex);
+                pKart.transform.GetChild(0).GetComponent<LapCount>().name = "P4";
                 kartsArray.Add(pKart.gameObject);
 
                 if (playerCount == 4)

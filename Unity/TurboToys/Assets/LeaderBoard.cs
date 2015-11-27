@@ -52,7 +52,13 @@ public class LeaderBoard : MonoBehaviour {
         {
             GameObject kart = leaderBoard[i].kart;
             leaderBoard[i].place = i + 1;
+            if(leaderBoard[i].wayPoint == 3 * 106)
+            {
+                leaderBoard[i].finished = true;
+            }
         }
+
+       
 
 	}
 }
