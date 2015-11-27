@@ -8,20 +8,24 @@ public class KartActive : MonoBehaviour {
     public float startTime = 3;
     private float timer = 0;
 	// Use this for initialization
+    private bool first = true;
 	void Start () {
 	    
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
-        if(timer >= startTime)
+        if (first)
         {
-            kartOn = true;
-        }
-        else
-        {
-            timer += Time.deltaTime;
+            if (timer >= startTime)
+            {
+                kartOn = true;
+                first = false;
+            }
+            else
+            {
+                timer += Time.deltaTime;
+            }
         }
         if (playerKart)
         {

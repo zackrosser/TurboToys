@@ -33,7 +33,7 @@ public class AIKart : MonoBehaviour
     public int point = 0;
     private GameObject targetWaypoint;
     private bool first = true;
-    Rigidbody rb;
+    public Rigidbody rb;
     // Use this for initialization
     void Start()
     {

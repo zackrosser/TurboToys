@@ -22,6 +22,8 @@ public class LeaderBoard : MonoBehaviour {
     private int players = 0;
     private GameObject winPoints;
 
+    int count = 0;
+
 	// Use this for initialization
 	void Start () {
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoints").GetComponent<SpawnPoints>();
@@ -39,8 +41,18 @@ public class LeaderBoard : MonoBehaviour {
         }
 	}
 	
+    void Update()
+    {
+        count++;
+        if(count >= 60)
+        {
+            count = 0;
+            UpdateKart();
+        }
+    }
+
 	// Update is called once per frame
-	void LateUpdate () {
+	void UpdateKart () {
 
         for (int i = 0; i < 8; i++)
         {
@@ -53,12 +65,28 @@ public class LeaderBoard : MonoBehaviour {
         for (int i = 0; i < 8; i++)
         {
             GameObject kart = leaderBoard[i].kart;
-            leaderBoard[i].place = i + 1;
-            if (leaderBoard[i].wayPoint == 3)//* 106)
+            if (leaderBoard[i].finished == false)
             {
-                kart.transform.GetComponent<KartActive>().kartOn = false;
-                kart.transform.position = winPoints.transform.GetChild(leaderBoard[i].place - 1).position;
-                kart.transform.rotation = winPoints.transform.GetChild(leaderBoard[i].place - 1).rotation;
+                leaderBoard[i].place = i + 1;
+                if (leaderBoard[i].wayPoint == 3)//* 106)
+                {
+                    kart.transform.GetComponent<KartActive>().kartOn = false;
+                    if (kart.transform.GetComponent<KartActive>().playerKart == true)
+                    {
+                        kart.transform.GetChild(0).position = winPoints.transform.GetChild(leaderBoard[i].place - 1).position;
+                        kart.transform.GetChild(0).rotation = winPoints.transform.GetChild(leaderBoard[i].place - 1).rotation;
+                        kart.transform.GetChild(0).GetComponent<KartControls>().rb.velocity = new Vector3(0, 0, 0); ;
+                        kart.transform.GetChild(0).GetComponent<KartControls>().playerCam.enabled = false;
+                    }
+                    else
+                    {
+                        kart.transform.position = winPoints.transform.GetChild(leaderBoard[i].place - 1).position;
+                        kart.transform.rotation = winPoints.transform.GetChild(leaderBoard[i].place - 1).rotation;
+                        kart.transform.GetComponent<AIKart>().rb.velocity = new Vector3(0,0,0);
+                    }
+                    leaderBoard[i].finished = true;
+                    
+                }
             }
         }
 
