@@ -6,6 +6,7 @@ public class LapCount : MonoBehaviour {
     public int lapCount = 0;
     public GameObject waypoints;
     public List<GameObject> waypoint = new List<GameObject>();
+    public string name = "";
 
     public int currentWaypoint = 0;
 
