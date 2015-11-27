@@ -266,6 +266,7 @@
      <Compile Include="Assets\Scripts\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\SpawnPoints.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
+     <Compile Include="Assets\Scripts\Zack\sceneTransition.cs" />
      <Compile Include="Assets\UI\Scripts\ParticleStopper.cs" />
      <Compile Include="Assets\UI\Scripts\Rotate_Object.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
