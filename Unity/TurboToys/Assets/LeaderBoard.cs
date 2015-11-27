@@ -68,7 +68,7 @@ public class LeaderBoard : MonoBehaviour {
             if (leaderBoard[i].finished == false)
             {
                 leaderBoard[i].place = i + 1;
-                if (leaderBoard[i].wayPoint == 3)//* 106)
+                if (leaderBoard[i].wayPoint == 3 * 106)
                 {
                     kart.transform.GetComponent<KartActive>().kartOn = false;
                     if (kart.transform.GetComponent<KartActive>().playerKart == true)
