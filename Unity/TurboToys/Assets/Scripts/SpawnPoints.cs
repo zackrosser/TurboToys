@@ -70,7 +70,7 @@ public class SpawnPoints : MonoBehaviour {
             if (karts[i] == "AI")
             {
                 //Spawn AI
-                kartsArray.Add(Instantiate(enemy, spawnPoints[i].transform.position - new Vector3(0, -0.5f, 0), Quaternion.identity) as GameObject);
+                kartsArray.Add(Instantiate(enemy, spawnPoints[i].transform.position - new Vector3(0, -0.3f, 0), Quaternion.identity) as GameObject);
                 kartsArray[i].SetActive(true);
                 kartsArray[i].transform.rotation = spawnPoints[i].transform.rotation;
                 kartsArray[i].GetComponent<AIKart>().number = 0;
@@ -81,7 +81,7 @@ public class SpawnPoints : MonoBehaviour {
             {
                 GameObject kartObj = Instantiate<GameObject>(PlayerKart);
                 PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
-                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
+                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(0, -0.05f, 0);
                 pKart.transform.rotation = spawnPoints[i].transform.rotation;
                 pKart.SetDriver(controlScript.players[0].driver);
                 pKart.SetKart(controlScript.players[0].kart);
@@ -115,7 +115,7 @@ public class SpawnPoints : MonoBehaviour {
             {
                 GameObject kartObj = Instantiate<GameObject>(PlayerKart);
                 PlayerKart pKart = kartObj.GetComponent<PlayerKart>();
-                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(-2, 0, -1);
+                pKart.transform.position = spawnPoints[i].transform.position - new Vector3(0, -1f, 0);
                 pKart.transform.rotation = spawnPoints[i].transform.rotation;
                 pKart.SetDriver(controlScript.players[1].driver);
                 pKart.SetKart(controlScript.players[1].kart);
