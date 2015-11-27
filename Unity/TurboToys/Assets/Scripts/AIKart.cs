@@ -29,7 +29,7 @@ public class AIKart : MonoBehaviour
     private float minDistance = 10f;
     Vector3 normal = new Vector3(0, 0, 0);
     public GameObject[] wheels;
-
+    private bool first2 = false;
     public int point = 0;
     private GameObject targetWaypoint;
     private bool first = true;
@@ -41,6 +41,9 @@ public class AIKart : MonoBehaviour
         current_speed = 0;
         waypointControl = GameObject.FindGameObjectWithTag("Waypoints");
         //Select Random Driver
+        waypoints = waypointControl.GetComponent<Waypoints>().waypoints;
+        targetWaypoint = waypoints[0];
+        first = false;
         int rand = Random.Range(0, 3);
         switch(rand)
         {
@@ -48,19 +51,19 @@ public class AIKart : MonoBehaviour
                 transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
                 transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
                 transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
-                transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                //transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
                 break;
             case 1:
                 transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
                 transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
                 transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
-                transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                //transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
                 break;
             case 2:
                 transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
                 transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
                 transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
-                transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                //transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
                 break;
             case 3:
                 //transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
@@ -121,8 +124,8 @@ public class AIKart : MonoBehaviour
             current_speed = fwd_accel;
         }
 
-
-        if (Vector3.Distance(transform.position, targetWaypoint.transform.position) <= minDistance)
+        if(!first2)
+        if (Vector3.Distance(transform.position, targetWaypoint.transform.position) <= minDistance && targetWaypoint != null)
         {
             minDistance = Random.RandomRange(12f, 16f);
             point++;
@@ -236,5 +239,6 @@ public class AIKart : MonoBehaviour
                 }
             }
         }
+        first2 = false;
     }
 }

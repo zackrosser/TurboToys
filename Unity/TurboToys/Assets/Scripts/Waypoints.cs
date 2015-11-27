@@ -23,11 +23,11 @@ public class Waypoints : MonoBehaviour
         {
             if (i == waypoints.Length - 1)
             {
-                Debug.DrawLine(waypoints[i].transform.position, waypoints[0].transform.position);
+                //Debug.DrawLine(waypoints[i].transform.position, waypoints[0].transform.position);
             }
             else
             {
-                Debug.DrawLine(waypoints[i].transform.position, waypoints[i + 1].transform.position);
+                //Debug.DrawLine(waypoints[i].transform.position, waypoints[i + 1].transform.position);
             }
         }
     }

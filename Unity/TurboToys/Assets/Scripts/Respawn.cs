@@ -42,4 +42,9 @@ public class Respawn : MonoBehaviour {
             onGround = false;
         }
     }
+
+    void OnDisable()
+    {
+        Debug.Log("Respawn was disabled");
+    }
 }

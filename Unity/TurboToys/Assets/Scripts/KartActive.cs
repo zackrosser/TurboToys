@@ -32,6 +32,7 @@ public class KartActive : MonoBehaviour {
             if (kartOn)
             {
                 transform.GetComponentInChildren<KartControls>().enabled = true;
+                transform.GetComponentInChildren<Respawn>().enabled = true;
             }
             else
             {
@@ -43,6 +44,7 @@ public class KartActive : MonoBehaviour {
             if (kartOn)
             {
                 transform.GetComponent<AIKart>().enabled = true;
+                transform.GetComponent<Respawn>().enabled = true;
             }
             else
             {
