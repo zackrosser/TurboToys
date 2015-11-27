@@ -18,8 +18,8 @@ public class Finished : MonoBehaviour {
 	void Update () {
 	    if(lapScript.lapCount >= 3)
         {
-            kartControls.enabled = false;
-            aiKart.enabled = true;
+            //kartControls.enabled = false;
+            //aiKart.enabled = true;
         }
 	}
 }

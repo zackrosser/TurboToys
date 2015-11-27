@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class sceneTransition : MonoBehaviour {
+public class Rotate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +10,6 @@ public class sceneTransition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        transform.Rotate(Vector3.up,0.8f);
 	}
 }

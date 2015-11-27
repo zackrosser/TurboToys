@@ -42,7 +42,7 @@ public class UI_InputManager : MonoBehaviour {
         {
             if (controller.MenuWasPressed)
             {
-                Application.LoadLevel(1);
+                Application.LoadLevel(Application.loadedLevel + 1);
             }
         }
     }

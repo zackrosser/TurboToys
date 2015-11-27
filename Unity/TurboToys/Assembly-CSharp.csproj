@@ -245,6 +245,7 @@
      <Compile Include="Assets\InControl\Source\iCade\ICadeState.cs" />
      <Compile Include="Assets\InControl\Test\TestInputManager.cs" />
      <Compile Include="Assets\LeaderBoard.cs" />
+     <Compile Include="Assets\Rotate.cs" />
      <Compile Include="Assets\Scripts\AIKart.cs" />
      <Compile Include="Assets\Scripts\BoostPad.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
@@ -260,13 +261,14 @@
      <Compile Include="Assets\Scripts\Finished.cs" />
      <Compile Include="Assets\Scripts\Hover.cs" />
      <Compile Include="Assets\Scripts\ItemShell.cs" />
+     <Compile Include="Assets\Scripts\KartActive.cs" />
      <Compile Include="Assets\Scripts\KartControls.cs" />
      <Compile Include="Assets\Scripts\LapCount.cs" />
+     <Compile Include="Assets\Scripts\MainMenuCursor.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />
      <Compile Include="Assets\Scripts\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\SpawnPoints.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
-     <Compile Include="Assets\Scripts\Zack\sceneTransition.cs" />
      <Compile Include="Assets\UI\Scripts\ParticleStopper.cs" />
      <Compile Include="Assets\UI\Scripts\Rotate_Object.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />

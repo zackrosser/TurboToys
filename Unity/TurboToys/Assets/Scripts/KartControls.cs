@@ -49,7 +49,7 @@ public class KartControls : MonoBehaviour
 
     private InputDevice inputDevice;
     Vector3 normal = new Vector3(0, 0, 0);
-    Rigidbody rb;
+    public Rigidbody rb;
 
     public Camera playerCam;
 
