@@ -260,8 +260,10 @@
      <Compile Include="Assets\Scripts\Finished.cs" />
      <Compile Include="Assets\Scripts\Hover.cs" />
      <Compile Include="Assets\Scripts\ItemShell.cs" />
+     <Compile Include="Assets\Scripts\KartActive.cs" />
      <Compile Include="Assets\Scripts\KartControls.cs" />
      <Compile Include="Assets\Scripts\LapCount.cs" />
+     <Compile Include="Assets\Scripts\MainMenuCursor.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />
      <Compile Include="Assets\Scripts\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\SpawnPoints.cs" />
@@ -283,11 +285,17 @@
      <None Include="Assets\TSF\Shaders\TSF.shader" />
      <None Include="Assets\InControl\Readme 1\README.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
